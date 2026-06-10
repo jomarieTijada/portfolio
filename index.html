@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script>
+    (function() {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.documentElement.classList.add('dark');
+        } else if (savedTheme === 'light') {
+            document.documentElement.classList.remove('dark');
+        } else {
+            if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.documentElement.classList.add('dark');
+            }
+        }
+    })();
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Jomarie Salvio Tijada",
+        "url": "./",
+        "image": "assets/images/jom.png",
+        "jobTitle": "Aspiring Software Engineer, Java, Python, Flutter Developer",
+        "description": "Jomarie Salvio Tijada (Jom) is a Computer Science student at the University of Northern Philippines, aspiring Software Engineer from Ilocos Sur.",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "San Juan",
+            "addressRegion": "Ilocos Sur",
+            "addressCountry": "PH"
+        },
+        "colloquialName": "Jom Tijada",
+        "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "University of Northern Philippines"
+        },
+        "sameAs": [
+            "https://github.com/enjomcoding",
+            "https://www.facebook.com/share/19KdLEE8yH/"
+        ],
+        "knowsAbout": ["Java", "Python", "Flutter", "Firebase", "C++", "JavaScript", "Java", "PHP", "Software Engineering"]
+    }
+    </script>
+
+    <title>Jomarie Tijada | Aspiring Software Engineer | Java &middot; Python &middot; Flutter</title>
+    <meta name="title" content="Jomarie Tijada | Aspiring Software Engineer | Java &middot; Python &middot; Flutter">
+    <meta name="description" content="Computer Science student at University of Northern Philippines. Aspiring Software Engineer from Ilocos Sur specializing in Java, Python, Flutter, and Firebase. Building impactful digital solutions.">
+    <meta name="keywords" content="Jomarie Tijada, Jom Tijada, Jomarie Salvio Tijada, Software Engineer Philippines, CS Student Ilocos Sur, UNP Computer Science, Flutter Developer Philippines, Java Developer, Python Developer">
+    <meta name="author" content="Jomarie Salvio Tijada">
+
+    <link rel="icon" type="image/png" href="assets/images/jom.png">
+    <link rel="shortcut icon" href="assets/images/jom.png" type="image/png">
+    <link rel="apple-touch-icon" href="assets/images/jom.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="./">
+    <meta property="og:title" content="Jomarie Tijada | Aspiring Software Engineer | Java &middot; Python &middot; Flutter">
+    <meta property="og:description" content="Computer Science student at University of Northern Philippines, aspiring Software Engineer from Ilocos Sur. Building impactful digital solutions with Java, Python, Flutter, and Firebase.">
+    <meta property="og:image" content="assets/images/jom.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Jomarie Tijada | Aspiring Software Engineer | Java &middot; Python &middot; Flutter">
+    <meta name="twitter:description" content="Computer Science student at UNP, aspiring Software Engineer from Ilocos Sur.">
+    <meta name="twitter:image" content="assets/images/jom.png">
+
+    <link rel="canonical" href="./">
+
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f9fafb">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#111111">
+    <meta name="language" content="English">
+
+    <meta name="geo.region" content="PH-ILS">
+    <meta name="geo.placename" content="San Juan, Ilocos Sur">
+
+    <script src="https://cdn.tailwindcss.com/"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/style.css?v=6">
+
+    <style>
+    .scrollbar-hide::-webkit-scrollbar { display: none; }
+    .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="antialiased bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-white min-h-screen flex flex-col">
+
+    <div class="flex-grow w-full">
+
+    <header class="bg-gray-50 dark:bg-[#111]">
+    <div class="max-w-5xl mx-auto px-4 md:px-6 py-8">
+        <div class="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-8 text-center md:text-left">
+
+            <div class="relative w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 rounded-lg overflow-hidden flex-shrink-0 shadow-sm">
+                <img src="assets/images/jom.png"
+                    alt="Portrait of Jomarie Salvio Tijada, Software Engineer from Ilocos Sur"
+                    class="w-full h-full object-cover">
+            </div>
+
+            <div class="flex-1 min-w-0 w-full">
+
+                <div class="flex items-center justify-center md:justify-between mb-1">
+                    <div class="flex items-center gap-2 flex-wrap justify-center md:justify-start">
+                        <h1 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white leading-tight">Jomarie Salvio Tijada</h1>
+                        <i class="fa-solid fa-circle-check text-blue-500 dark:text-blue-400 text-base md:text-lg"></i>
+                    </div>
+                    <button id="darkModeToggle"
+                            title="Switch Theme"
+                            class="absolute top-4 right-4 md:relative md:top-0 md:right-0 w-10 h-10 flex items-center justify-center flex-shrink-0 rounded-lg border border-gray-300 transition-colors duration-200 hover:bg-gray-100/50 dark:hover:bg-gray-200">
+                        <i class="far fa-moon text-gray-700 dark:text-gray-300 dark-icon hidden"></i>
+                        <i class="far fa-sun text-gray-700 dark:text-gray-300 light-icon"></i>
+                    </button>
+                </div>
+
+                <div class="flex items-center justify-center md:justify-start gap-2 text-gray-600 dark:text-gray-400 mb-1">
+                    <i class="fas fa-location-dot text-[10px]"></i>
+                    <span class="text-[10px] md:text-xs">Refaro, San Juan, Ilocos Sur, Philippines</span>
+                </div>
+
+                <p class="text-sm md:text-base text-gray-700 dark:text-gray-300 mt-2 mb-4 font-medium leading-tight">
+                    Aspiring Software Engineer | Java &amp; Python | Flutter | Firebase | CS Student
+                </p>
+
+                <div class="flex flex-col sm:flex-row md:flex-wrap gap-2.5 justify-center md:justify-start">
+                    <a href="https://drive.google.com/uc?export=download&id=1yYtOe_4uG_el-X6jZbMgWulfy1LGEGqv" download class="hover-lift bg-black text-white px-5 py-2.5 md:py-2 rounded-lg text-sm font-medium transition flex items-center justify-center gap-2 shadow-sm">
+                        <i class="fas fa-download text-xs"></i>
+                        <span>Download CV</span>
+                    </a>
+                    <a href="mailto:jomsalvio@gmail.com" class="hover-lift bg-white dark:bg-transparent border border-gray-200 dark:border-gray-200 text-gray-700 dark:text-white px-5 py-2.5 md:py-2 rounded-lg text-sm font-medium transition flex items-center justify-center gap-2 shadow-sm">
+                        <i class="fas fa-envelope text-xs"></i>
+                        <span>Send Email</span>
+                    </a>
+                    <a href="https://github.com/enjomcoding" target="_blank"
+                    class="hover-lift bg-white dark:bg-transparent border border-gray-200 dark:border-gray-200 text-gray-700 dark:text-white px-5 py-2.5 md:py-2 rounded-lg text-sm font-medium transition flex items-center justify-center md:justify-between gap-3 shadow-sm">
+                        <div class="flex items-center gap-2">
+                            <i class="fab fa-github text-xs"></i>
+                            <span>GitHub</span>
+                        </div>
+                        <i class="fas fa-chevron-right text-[10px] opacity-60 hidden md:block"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </header>
+
+    <main>
+        <div class="max-w-5xl mx-auto px-3 sm:px-4 py-3 sm:py-4 space-y-3 sm:space-y-4">
+
+            <!-- MAIN TWO-COLUMN GRID -->
+            <div class="flex flex-col lg:grid lg:grid-cols-5 gap-3 sm:gap-4">
+
+                <!-- LEFT COLUMN (col-span-2) -->
+                <div class="contents lg:flex lg:flex-col lg:gap-4 lg:col-span-2">
+
+                    <!-- About Me -->
+                    <section class="portfolio-card bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4 sm:p-6 fade-in hover-lift hover:shadow-xl order-1 lg:order-none">
+                        <div class="card-heading flex items-center gap-2 mb-4">
+                            <h2 class="text-lg sm:text-xl font-bold text-gray-900 dark:text-white">About Me</h2>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-3">
+                            I'm a Computer Science student at the University of Northern Philippines with a passion for building, learning, and creating with technology. I love solving problems through code and turning ideas into real, working software.
+                        </p>
+                        <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                           Currently sharpening my skills in Java, Python, Flutter, and Firebase &mdash; building everything from mobile apps to management systems. I believe in continuous learning and building things that aren't just functional, but built to last.
+                        </p>
+                    </section>
+
+                    <!-- Tech Stack -->
+                    <section class="portfolio-card bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4 sm:p-6 fade-in hover-lift hover:shadow-xl order-2 lg:order-none">
+                        <div class="card-heading flex justify-between items-center mb-6">
+                            <h2 class="text-lg sm:text-xl font-bold text-gray-900 dark:text-white">Tech Stack</h2>
+                        </div>
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="text-base font-bold text-gray-900 dark:text-white mb-3">Languages</h3>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="border border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300 text-sm px-3 py-1 rounded-lg">Java</span>
+                                    <span class="border border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300 text-sm px-3 py-1 rounded-lg">Python</span>
+                                    <span class="border border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300 text-sm px-3 py-1 rounded-lg">C++</span>
+                                    <span class="border border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300 text-sm px-3 py-1 rounded-lg">JavaScript</span>
+                                    <span class="border border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300 text-sm px-3 py-1 rounded-lg">PHP</span>
+                                    <span class="border border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300 text-sm px-3 py-1 rounded-lg">Dart</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-base font-bold text-gray-900 dark:text-white mb-3">Frameworks &amp; Database</h3>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="border border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300 text-sm px-3 py-1 rounded-lg">Flutter</span>
+                                    <span class="border border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300 text-sm px-3 py-1 rounded-lg">Java</span>
+                                    <span class="border border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300 text-sm px-3 py-1 rounded-lg">Firebase</span>
+                                    <span class="border border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300 text-sm px-3 py-1 rounded-lg">SQL</span>
+                                    <span class="border border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300 text-sm px-3 py-1 rounded-lg">MS Access</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-base font-bold text-gray-900 dark:text-white mb-3">Tools &amp; Soft Skills</h3>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="border border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300 text-sm px-3 py-1 rounded-lg">Git &amp; GitHub</span>
+                                    <span class="border border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300 text-sm px-3 py-1 rounded-lg">Problem Solving</span>
+                                    <span class="border border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300 text-sm px-3 py-1 rounded-lg">Software Testing</span>
+                                    <span class="border border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300 text-sm px-3 py-1 rounded-lg">Teamwork &amp; Leadership</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Education -->
+                    <section class="portfolio-card bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4 sm:p-6 fade-in hover-lift hover:shadow-xl order-5 lg:order-none">
+                        <div class="card-heading flex items-center gap-2 mb-4">
+                            <h2 class="text-lg sm:text-xl font-bold text-gray-900 dark:text-white">Education</h2>
+                        </div>
+                        <div class="space-y-3">
+                            <div>
+                                <p class="font-semibold text-gray-900 dark:text-white text-sm sm:text-base">BS Computer Science</p>
+                                <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400 mt-0.5">University of Northern Philippines</p>
+                                <p class="text-xs text-gray-500 mt-1">2023 - 2027</p>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-900 dark:text-white text-sm sm:text-base">Senior High School (TVL-ICT)</p>
+                                <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400 mt-0.5">San Juan National High School</p>
+                                <p class="text-xs text-gray-500 mt-1">2021 - 2023</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Certifications -->
+                    <section class="portfolio-card bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4 sm:p-6 fade-in hover-lift hover:shadow-xl order-6 lg:order-none">
+                        <div class="card-heading flex justify-between items-center mb-6">
+                            <h2 class="text-lg sm:text-xl font-bold text-gray-900 dark:text-white">Certifications</h2>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="group p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-slate-200 dark:hover:bg-gray-600 transition-colors duration-200 hover:-translate-y-1">
+                                <p class="font-semibold text-gray-900 dark:text-white text-sm text-left group-hover:text-blue-600 transition-colors">Introduction to Cybersecurity</p>
+                                <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 text-left">CISCO Networking Academy &bull; 2025</p>
+                            </div>
+                            <div class="group p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-slate-200 dark:hover:bg-gray-600 transition-colors duration-200 hover:-translate-y-1">
+                                <p class="font-semibold text-gray-900 dark:text-white text-sm text-left group-hover:text-blue-600 transition-colors">Network Defense</p>
+                                <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 text-left">CISCO Networking Academy &bull; 2025</p>
+                            </div>
+                            <div class="group p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-slate-200 dark:hover:bg-gray-600 transition-colors duration-200 hover:-translate-y-1">
+                                <p class="font-semibold text-gray-900 dark:text-white text-sm text-left group-hover:text-blue-600 transition-colors">Cybersecurity Administration</p>
+                                <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 text-left">CISCO Networking Academy &bull; 2025</p>
+                            </div>
+                            <div class="group p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-slate-200 dark:hover:bg-gray-600 transition-colors duration-200 hover:-translate-y-1">
+                                <p class="font-semibold text-gray-900 dark:text-white text-sm text-left group-hover:text-blue-600 transition-colors">Threat Analysis</p>
+                                <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 text-left">CISCO Networking Academy &bull; 2025</p>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+                <!-- END LEFT COLUMN -->
+
+                <!-- RIGHT COLUMN (col-span-3) -->
+                <div class="contents lg:flex lg:flex-col lg:gap-4 lg:col-span-3">
+
+                    <!-- Projects -->
+                    <section class="portfolio-card portfolio-projects-card bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4 sm:p-6 md:p-7 fade-in hover-lift hover:shadow-xl order-3 lg:order-none">
+                        <div class="card-heading flex justify-between items-center gap-2 mb-6">
+                            <h2 class="text-lg sm:text-xl font-bold text-gray-900 dark:text-white">Projects</h2>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                            <div class="portfolio-mini-card border border-gray-100 dark:border-gray-700 rounded-lg overflow-hidden hover-lift hover:shadow-lg transition">
+                                <img src="assets/images/vote.png" alt="Vote CSS - Flutter Voting System Project by Jomarie Tijada" loading="lazy" class="w-full h-28 sm:h-32 object-cover bg-gray-100">
+                                <div class="p-3 sm:p-4">
+                                    <h3 class="font-semibold text-gray-900 dark:text-white text-base mb-1">Vote CSS</h3>
+                                    <p class="text-xs text-gray-600 dark:text-gray-400 mb-3">Flutter-based voting system with Firebase &mdash; ID scanning, live vote counts, chatbot &amp; admin panel.</p>
+                                    <span class="domain-link-button inline-block text-xs px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-gray-600 dark:text-gray-300">Flutter &middot; Firebase</span>
+                                </div>
+                            </div>
+                            <div class="portfolio-mini-card border border-gray-100 dark:border-gray-700 rounded-lg overflow-hidden hover-lift hover:shadow-lg transition">
+                                <img src="assets/images/tracksactions.png" alt="Tracksactions - Java Budget Tracking Software by Jomarie Tijada" loading="lazy" class="w-full h-28 sm:h-32 object-cover bg-gray-100">
+                                <div class="p-3 sm:p-4">
+                                    <h3 class="font-semibold text-gray-900 dark:text-white text-base mb-1">Tracksactions</h3>
+                                    <p class="text-xs text-gray-600 dark:text-gray-400 mb-3">CRUD-based budget tracking system built with Java and MS Access.</p>
+                                    <span class="domain-link-button inline-block text-xs px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-gray-600 dark:text-gray-300">Java &middot; MS Access</span>
+                                </div>
+                            </div>
+                            <div class="portfolio-mini-card border border-gray-100 dark:border-gray-700 rounded-lg overflow-hidden hover-lift hover:shadow-lg transition">
+                                <img src="assets/images/sms.jpg" alt="Student Management System - Java SQL Project by Jomarie Tijada" loading="lazy" class="w-full h-28 sm:h-32 object-cover bg-gray-100">
+                                <div class="p-3 sm:p-4">
+                                    <h3 class="font-semibold text-gray-900 dark:text-white text-base mb-1">Student Management System</h3>
+                                    <p class="text-xs text-gray-600 dark:text-gray-400 mb-3">CRUD-based system for managing student records, built with Java and SQL.</p>
+                                    <span class="domain-link-button inline-block text-xs px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-gray-600 dark:text-gray-300">Java &middot; SQL</span>
+                                </div>
+                            </div>
+                            <div class="portfolio-mini-card border border-gray-100 dark:border-gray-700 rounded-lg overflow-hidden hover-lift hover:shadow-lg transition">
+                                <div class="p-3 sm:p-4">
+                                    <h3 class="font-semibold text-gray-900 dark:text-white text-base mb-1">AMT AQA Reviewer</h3>
+                                    <p class="text-xs text-gray-600 dark:text-gray-400 mb-3">Mobile-based reviewer application built with Flutter and Dart.</p>
+                                    <span class="domain-link-button inline-block text-xs px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-gray-600 dark:text-gray-300">Flutter &middot; Dart</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Experience -->
+                    <section class="portfolio-card bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4 sm:p-6 fade-in hover-lift hover:shadow-xl order-4 lg:order-none">
+                        <div class="card-heading flex items-center gap-2 mb-6">
+                            <h2 class="text-lg sm:text-xl font-bold text-gray-900 dark:text-white">Experience</h2>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex items-start justify-between gap-4 py-2">
+                                <div class="flex items-start gap-3 flex-1">
+                                    <div class="experience-dot current w-2 h-2 rounded-full mt-2 flex-shrink-0 bg-blue-500"></div>
+                                    <div>
+                                        <h3 class="font-semibold text-gray-900 dark:text-white text-sm sm:text-base">Developer Intern (OJT)</h3>
+                                        <p class="text-sm text-gray-600 dark:text-gray-400 mt-0.5">tiendaan.com</p>
+                                    </div>
+                                </div>
+                                <span class="text-xs sm:text-sm text-gray-500 font-medium whitespace-nowrap">2026</span>
+                            </div>
+                            <div class="flex items-start justify-between gap-4 py-2">
+                                <div class="flex items-start gap-3 flex-1">
+                                    <div class="experience-dot w-2 h-2 rounded-full mt-2 flex-shrink-0 bg-gray-400"></div>
+                                    <div>
+                                        <h3 class="font-semibold text-gray-900 dark:text-white text-sm sm:text-base">Freelance Web &amp; Mobile Developer</h3>
+                                        <p class="text-sm text-gray-600 dark:text-gray-400 mt-0.5">Genuine Garage Website (React/Flutter) &amp; AMT AQA Reviewer (Flutter)</p>
+                                    </div>
+                                </div>
+                                <span class="text-xs sm:text-sm text-gray-500 font-medium whitespace-nowrap">2026</span>
+                            </div>
+                            <div class="flex items-start justify-between gap-4 py-2">
+                                <div class="flex items-start gap-3 flex-1">
+                                    <div class="experience-dot w-2 h-2 rounded-full mt-2 flex-shrink-0 bg-gray-400"></div>
+                                    <div>
+                                        <h3 class="font-semibold text-gray-900 dark:text-white text-sm sm:text-base">Participant &mdash; GDG Baguio Build with AI</h3>
+                                        <p class="text-sm text-gray-600 dark:text-gray-400 mt-0.5">Google Developer Groups</p>
+                                    </div>
+                                </div>
+                                <span class="text-xs sm:text-sm text-gray-500 font-medium whitespace-nowrap">2026</span>
+                            </div>
+                            <div class="flex items-start justify-between gap-4 py-2">
+                                <div class="flex items-start gap-3 flex-1">
+                                    <div class="experience-dot w-2 h-2 rounded-full mt-2 flex-shrink-0 bg-gray-400"></div>
+                                    <div>
+                                        <h3 class="font-semibold text-gray-900 dark:text-white text-sm sm:text-base">Management Staff &mdash; CSS</h3>
+                                        <p class="text-sm text-gray-600 dark:text-gray-400 mt-0.5">College of Communication and Information Technology</p>
+                                    </div>
+                                </div>
+                                <span class="text-xs sm:text-sm text-gray-500 font-medium whitespace-nowrap">2025 - 2026</span>
+                            </div>
+                            <div class="flex items-start justify-between gap-4 py-2">
+                                <div class="flex items-start gap-3 flex-1">
+                                    <div class="experience-dot w-2 h-2 rounded-full mt-2 flex-shrink-0 bg-gray-400"></div>
+                                    <div>
+                                        <h3 class="font-semibold text-gray-900 dark:text-white text-sm sm:text-base">Debug4 Participant &mdash; Hack the North</h3>
+                                        <p class="text-sm text-gray-600 dark:text-gray-400 mt-0.5">Hackathon</p>
+                                    </div>
+                                </div>
+                                <span class="text-xs sm:text-sm text-gray-500 font-medium whitespace-nowrap">2025</span>
+                            </div>
+                            <div class="flex items-start justify-between gap-4 py-2">
+                                <div class="flex items-start gap-3 flex-1">
+                                    <div class="experience-dot w-2 h-2 rounded-full mt-2 flex-shrink-0 bg-gray-400"></div>
+                                    <div>
+                                        <h3 class="font-semibold text-gray-900 dark:text-white text-sm sm:text-base">Management Staff &mdash; ACTS</h3>
+                                        <p class="text-sm text-gray-600 dark:text-gray-400 mt-0.5">College of Communication and Information Technology</p>
+                                    </div>
+                                </div>
+                                <span class="text-xs sm:text-sm text-gray-500 font-medium whitespace-nowrap">2024 - 2025</span>
+                            </div>
+                            <div class="flex items-start justify-between gap-4 py-2">
+                                <div class="flex items-start gap-3 flex-1">
+                                    <div class="experience-dot w-2 h-2 rounded-full mt-2 flex-shrink-0 bg-gray-400"></div>
+                                    <div>
+                                        <h3 class="font-semibold text-gray-900 dark:text-white text-sm sm:text-base">1st Year Representative &mdash; ACTS</h3>
+                                        <p class="text-sm text-gray-600 dark:text-gray-400 mt-0.5">College of Communication and Information Technology</p>
+                                    </div>
+                                </div>
+                                <span class="text-xs sm:text-sm text-gray-500 font-medium whitespace-nowrap">2023 - 2024</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Gallery section removed -->
+
+                    <!-- Recommendations section removed -->
+
+                </div>
+                <!-- END RIGHT COLUMN -->
+
+            </div>
+            <!-- END MAIN GRID -->
+
+            <!-- CONTACT &mdash; full width -->
+            <section class="portfolio-card portfolio-contact-card bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4 sm:p-6 fade-in hover-lift hover:shadow-xl w-full">
+                <div class="grid grid-cols-1 md:grid-cols-[1.1fr_0.9fr] gap-6 lg:gap-10 items-stretch">
+                    <div class="contact-intro">
+                        <h3 class="contact-title text-gray-900 dark:text-white mb-4">
+                            Have an idea?<span>Let's talk.</span>
+                        </h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-xs sm:text-sm leading-relaxed mb-4 sm:mb-6">
+                            Open to freelance web &amp; mobile development projects, collaboration on open source,
+                            and internship opportunities. Let's build something great together!
+                        </p>
+                        <div class="contact-social-block">
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-3">Follow Me</p>
+                            <div class="flex flex-wrap gap-3">
+                                <a href="https://github.com/enjomcoding" target="_blank" rel="noopener noreferrer"
+                                    class="w-9 h-9 rounded-lg bg-gray-50 dark:bg-gray-700 flex items-center justify-center text-gray-500 hover:text-black hover:bg-gray-100 hover:-translate-y-1 transition-all duration-300 border border-gray-200 dark:border-gray-600 shadow-sm">
+                                    <i class="fab fa-github text-sm"></i>
+                                </a>
+                                <a href="https://www.facebook.com/share/19KdLEE8yH/" target="_blank" rel="noopener noreferrer"
+                                    class="w-9 h-9 rounded-lg bg-gray-50 dark:bg-gray-700 flex items-center justify-center text-gray-500 hover:text-blue-600 hover:bg-blue-50 hover:-translate-y-1 transition-all duration-300 border border-gray-200 dark:border-gray-600 shadow-sm">
+                                    <i class="fab fa-facebook text-sm"></i>
+                                </a>
+                                <a href="https://www.tiktok.com/@jpoo789" target="_blank" rel="noopener noreferrer"
+                                    class="w-9 h-9 rounded-lg bg-gray-50 dark:bg-gray-700 flex items-center justify-center text-gray-500 hover:text-pink-500 hover:bg-pink-50 hover:-translate-y-1 transition-all duration-300 border border-gray-200 dark:border-gray-600 shadow-sm">
+                                    <i class="fab fa-tiktok text-sm"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-list space-y-2 sm:space-y-2.5">
+                        <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2">Get in Touch</p>
+                        <a href="mailto:jomsalvio@gmail.com"
+                            class="contact-link flex items-center p-2.5 sm:p-3 border border-gray-200 dark:border-gray-700 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-all group hover:-translate-y-1 duration-300">
+                            <div class="flex items-center gap-2 sm:gap-3 min-w-0">
+                                <div class="w-9 h-9 rounded-xl bg-gray-50 dark:bg-gray-700 flex items-center justify-center text-gray-400 flex-shrink-0">
+                                    <i class="fas fa-envelope text-sm"></i>
+                                </div>
+                                <div class="min-w-0">
+                                    <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest block">Email</span>
+                                    <p class="text-sm text-gray-900 dark:text-white font-normal truncate">jomsalvio@gmail.com</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="tel:+639566522498"
+                            class="contact-link flex items-center p-2.5 sm:p-3 border border-gray-200 dark:border-gray-700 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-all group hover:-translate-y-1 duration-300">
+                            <div class="flex items-center gap-2 sm:gap-3">
+                                <div class="w-9 h-9 rounded-xl bg-gray-50 dark:bg-gray-700 flex items-center justify-center text-gray-400 flex-shrink-0">
+                                    <i class="fas fa-phone text-sm"></i>
+                                </div>
+                                <div>
+                                    <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest block">Phone</span>
+                                    <p class="text-sm text-gray-900 dark:text-white font-normal">+63-956-652-2498</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://github.com/enjomcoding" target="_blank" rel="noopener noreferrer"
+                            class="contact-link flex items-center p-2.5 sm:p-3 border border-gray-200 dark:border-gray-700 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-all group hover:-translate-y-1 duration-300">
+                            <div class="flex items-center gap-2 sm:gap-3">
+                                <div class="w-9 h-9 rounded-xl bg-gray-50 dark:bg-gray-700 flex items-center justify-center text-gray-400 flex-shrink-0">
+                                    <i class="fab fa-github text-sm"></i>
+                                </div>
+                                <div>
+                                    <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest block">GitHub</span>
+                                    <p class="text-sm text-gray-900 dark:text-white font-normal">enjomcoding</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    </div>
+
+    <footer class="bg-white dark:bg-gray-900 mt-6 transition-colors duration-300 relative">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-[1px]
+                bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
+
+    <div class="max-w-4xl mx-auto px-6 py-5">
+        <div class="flex flex-col items-center justify-center gap-1 text-center">
+            <p class="text-sm text-gray-900 dark:text-white font-normal">
+                &copy; 2026 Jomarie Salvio Tijada. All Rights Reserved.
+            </p>
+            <p class="text-sm text-gray-900 dark:text-white font-normal">
+                Developed in San Juan, Ilocos Sur, Philippines
+            </p>
+        </div>
+    </div>
+    </footer>
+
+    <button id="scrollToTop"
+        title="Back to Top"
+        class="fixed bottom-8 right-6 z-[40] hidden w-12 h-12 items-center justify-center shrink-0 rounded-full transition-all duration-300 shadow-lg bg-black text-white hover:bg-zinc-800 hover:scale-110">
+        <i class="fas fa-chevron-up text-lg"></i>
+    </button>
+
+    <script src="assets/js/theme.js?v=2" defer></script>
+        <script src="assets/js/chatbotKnowledge.js?v=3" defer></script>
+<script src="assets/js/chat-widget.js?v=10" defer></script>
+</body>
+</html>

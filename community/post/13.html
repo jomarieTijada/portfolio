@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="KVFoSIoz3hx3jYNxeSzD2qKtHWREk5AcgOfmlPLF">
+
+    <script>
+    (function() {
+        const isCommunity = window.location.pathname.includes('/community');
+        const themeKey = isCommunity ? 'community_theme' : 'theme';
+        const savedTheme = localStorage.getItem(themeKey);
+        
+        if (savedTheme === 'dark') {
+            document.documentElement.classList.add('dark');
+        } else if (savedTheme === 'light') {
+            document.documentElement.classList.remove('dark');
+        } else {
+            if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.documentElement.classList.add('dark');
+            }
+        }
+    })();
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Jomarie Salvio Tijada",
+        "url": "./",
+        "image": "assets/images/jom.png",
+        "jobTitle": "Aspiring Software Engineer, Java, Python, Flutter Developer",
+        "description": "Jomarie Salvio Tijada (Jom) is a Computer Science student and aspiring Software Engineer from San Juan, Ilocos Sur, specializing in Java, Python, Flutter, and Firebase.",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "San Juan, Ilocos Sur",
+            "addressRegion": "Ilocos Sur",
+            "addressCountry": "PH"
+        },
+        "colloquialName": "Jomarie Tijada",
+        "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "University of Northern Philippines"
+        },
+        "sameAs": [
+            "https://github.com/enjomcoding",
+            "https://github.com/enjomcoding" 
+        ],
+        "knowsAbout": ["Java", "Flutter", "Firebase Design", "Python", "Mobile Development", "Firebase Integration", "Software Engineering"]
+    }
+    </script>
+    
+        
+    <title>Called 2 Create | Community Hub</title>
+    <meta name="title" content="Called 2 Create | Community Hub">
+    <meta name="description" content="Jomarie Salvio Tijada (Jom) is a Student Freelancer and Software Engineer based in San Juan, Ilocos Sur. Expert in Java, Flutter, Firebase, and Python.">
+    <meta name="keywords" content="Jomarie Salvio Tijada, Jomarie Tijada, Jomarie Salvio Tijada San Juan Ilocos Sur, Software Engineer Philippines, CS Student Ilocos Sur, Jomarie Tijada Portfolio, Jomarie Salvio Tijada Portfolio, Flutter Developer Philippines, Java Developer, Python Developer">
+    <meta name="author" content="Jomarie Salvio Tijada">
+
+    <link rel="icon" type="image/png" href="../../assets/images/jom.png">
+    <link rel="shortcut icon" href="../../assets/images/jom.png" type="image/png">
+    <link rel="apple-touch-icon" href="../../assets/images/jom.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="./">
+    <meta property="og:title" content="Jomarie Salvio Tijada | Aspiring Software Engineer | Java | Python | Flutter">
+    <meta property="og:description" content="Computer Science student and aspiring Software Engineer from San Juan, Ilocos Sur, building projects with Java, Python, Flutter, and Firebase.">
+    <meta property="og:image" content="assets/images/jom.png">
+    <meta property="og:image:secure_url" content="assets/images/jom.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="./">
+    <meta name="twitter:title" content="Jomarie Salvio Tijada | Aspiring Software Engineer | Java | Python | Flutter">
+    <meta name="twitter:description" content="Computer Science student and aspiring Software Engineer from San Juan, Ilocos Sur, building projects with Java, Python, Flutter, and Firebase.">
+    <meta name="twitter:image" content="assets/images/jom.png">
+
+    <link rel="canonical" href="13.html">
+
+    <meta name="geo.region" content="PH-00">
+    <meta name="geo.placename" content="San Juan, Ilocos Sur">
+    <meta name="geo.position" content="14.6061;121.0315">
+    <meta name="ICBM" content="14.6061, 121.0315">
+        
+    
+    <script src="https://cdn.tailwindcss.com/"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" 
+          integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../../assets/css/style.css?v=6">
+</head>
+<body class="antialiased bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-white min-h-screen flex flex-col">
+
+    
+            <div id="signInModal" class="modal">
+    
+    <div class="signin-card w-[92%] max-w-md mx-auto bg-white dark:bg-gray-800 rounded-xl p-6 sm:p-8 relative" onclick="event.stopPropagation()">
+        <button type="button" 
+            class="close-btn absolute top-4 right-4 z-[1010] p-2 text-2xl font-bold leading-none text-gray-500 hover:text-black dark:hover:text-white transition-colors" 
+            onclick="closeSignInModal()">
+            &times;
+        </button>
+        
+        <h2 class="text-xl sm:text-2xl font-bold mb-6 text-black dark:text-white text-center">Sign In</h2>
+
+        <div id="signin-error" class="hidden error-message bg-red-100 text-red-600 p-3 rounded-lg mb-4 text-sm flex items-center">
+            <i class="fas fa-exclamation-circle mr-2 flex-shrink-0"></i>
+            <span id="signin-error-text"></span>
+        </div>
+
+        <form id="signin-form" action="./login" method="POST" autocomplete="on">
+            <input type="hidden" name="_token" value="KVFoSIoz3hx3jYNxeSzD2qKtHWREk5AcgOfmlPLF" autocomplete="off">            <div class="mb-4 text-left">
+                <label class="text-sm font-medium text-black dark:text-white">Email Address</label>
+                <input type="email" 
+                    name="email" 
+                    id="email"
+                    autocomplete="email"
+                    class="signin-input w-full" 
+                    required>
+            </div>
+            
+            <div class="mb-6 text-left">
+                <label class="text-sm font-medium text-black dark:text-white">Password</label>
+                <div class="password-wrapper relative">
+                    <input type="password" 
+                        name="password" 
+                        id="signin-pass"
+                        class="signin-input w-full pr-10" 
+                        autocomplete="current-password" 
+                        required>
+                    <i class="fas fa-eye toggle-password absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer text-gray-400" onclick="togglePass()"></i>
+                </div>
+            </div>
+            
+            <button type="submit" id="signin-submit-btn" class="register-btn hover-lift w-full py-3 rounded-lg font-bold transition-all shadow-md hover:shadow-lg text-sm sm:text-base">
+                Sign In
+            </button>
+        </form>
+        
+        <div class="mt-8 text-center text-sm">
+            <span class="modal-footer-text text-gray-600 dark:text-gray-400">Need an account?</span>
+            <button type="button" onclick="closeSignInModal(); openModal();" class="ml-1 modal-footer-link transition-colors font-bold">
+                Register here
+            </button>
+        </div>
+    </div>
+</div>
+
+<script>
+document.getElementById('signin-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const btn = document.getElementById('signin-submit-btn');
+    const errorBox = document.getElementById('signin-error');
+    const errorText = document.getElementById('signin-error-text');
+    const csrfMeta = document.querySelector('meta[name="csrf-token"]');
+
+    btn.disabled = true;
+    btn.textContent = 'Signing in...';
+    errorBox.classList.add('hidden');
+
+    try {
+        const formData = new FormData(this);
+
+        const response = await fetch(this.action, {
+            method: 'POST',
+            body: formData,
+            credentials: 'same-origin',
+            headers: { 
+                'X-Requested-With': 'XMLHttpRequest',
+                'Accept': 'application/json',
+                'X-CSRF-TOKEN': csrfMeta ? csrfMeta.getAttribute('content') : ''
+            }
+        });
+
+        if (response.status === 419) {
+            window.location.reload();
+            return;
+        }
+
+        if (response.redirected) {
+            window.location.replace(response.url);
+            return;
+        }
+
+        const data = await response.json();
+
+        if (data.status === 'success') {
+            btn.textContent = 'Redirecting...';
+            window.location.replace(data.redirect || '/community');
+            return;
+        }
+
+        errorText.textContent = data.message || 'Invalid email or password.';
+        errorBox.classList.remove('hidden');
+        btn.disabled = false;
+        btn.textContent = 'Sign In';
+
+    } catch (err) {
+        console.error('Login error:', err);
+        errorText.textContent = 'Network error. Please check your connection.';
+        errorBox.classList.remove('hidden');
+        btn.disabled = false;
+        btn.textContent = 'Sign In';
+    }
+});
+</script>        <div id="registerModal" class="modal">
+
+    <div class="register-card w-[95%] max-w-xl mx-auto bg-white dark:bg-gray-800 rounded-xl p-5 sm:p-8 overflow-y-auto max-h-[95vh] relative" onclick="event.stopPropagation()">
+        <button type="button" 
+            class="close-btn absolute top-4 right-4 z-[1010] p-2 text-2xl font-bold leading-none text-gray-500 hover:text-black dark:hover:text-white transition-colors" 
+            onclick="closeModal()">
+            &times;
+        </button>
+    
+        <h2 class="text-xl sm:text-2xl font-bold mb-6 text-black dark:text-white text-center">Join the Community</h2>
+
+        <div id="register-error" class="hidden error-message bg-red-100 text-red-600 p-3 rounded-lg mb-4 text-sm flex items-center">
+            <i class="fas fa-exclamation-circle mr-2 flex-shrink-0"></i>
+            <span id="register-error-text"></span>
+        </div>
+        
+        <form id="register-form" action="./register" method="POST">
+            <input type="hidden" name="_token" value="KVFoSIoz3hx3jYNxeSzD2qKtHWREk5AcgOfmlPLF" autocomplete="off">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                <div class="text-left">
+                    <label class="text-sm font-medium text-black dark:text-white">First Name</label>
+                    <input type="text" name="first_name" class="register-input w-full" required>
+                </div>
+                <div class="text-left">
+                    <label class="text-sm font-medium text-black dark:text-white">Last Name</label>
+                    <input type="text" name="last_name" class="register-input w-full" required>
+                </div>
+            </div>
+
+            <div class="mb-4 text-left">
+                <label class="text-sm font-medium text-black dark:text-white">Email Address</label>
+                <input type="email" name="email" id="register-email" class="register-input w-full" required>
+                <p id="register-email-hint" class="text-xs text-gray-600 dark:text-gray-400 mt-1">This will be your sign-in email</p>
+            </div>
+
+            <div class="mb-4 text-left">
+                <label class="text-sm font-medium text-black dark:text-white">Password</label>
+                <div class="password-wrapper relative">
+                    <input type="password" id="register-pass" name="password" class="register-input w-full pr-10" minlength="6" required>
+                    <i class="fas fa-eye toggle-password-register absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer" onclick="toggleRegisterPass()"></i>
+                </div>
+                <p class="text-xs text-gray-600 dark:text-gray-400 mt-1">Must be at least 6 characters long</p>
+            </div>
+
+            <div class="mb-4 text-left">
+                <label class="text-sm font-medium text-black dark:text-white mb-2 block">I am a</label>
+                <div class="grid grid-cols-2 gap-3">
+                    <label class="role-option flex items-center justify-center gap-2 p-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg cursor-pointer transition-all">
+                        <input type="radio" name="user_role" value="student" class="hidden" required onchange="updateInstitutionLabel('student')">
+                        <i class="fas fa-graduation-cap text-sm role-icon"></i>
+                        <span class="font-semibold text-xs sm:text-sm role-text">Student</span>
+                    </label>
+                    <label class="role-option flex items-center justify-center gap-2 p-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg cursor-pointer transition-all">
+                        <input type="radio" name="user_role" value="professional" class="hidden" required onchange="updateInstitutionLabel('professional')">
+                        <i class="fas fa-briefcase text-sm role-icon"></i>
+                        <span class="font-semibold text-xs sm:text-sm role-text">Professional</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="mb-6 text-left">
+                <label id="institution-label" class="text-sm font-medium text-black dark:text-white">School/University (Optional)</label>
+                <input type="text" id="institution-input" name="institution" class="register-input w-full" placeholder="e.g., University of the Philippines">
+            </div>
+
+            <div class="flex flex-col-reverse sm:grid sm:grid-cols-2 gap-3">
+                <button type="button" onclick="closeModal()" class="cancel-btn py-3 rounded-lg font-medium transition-all text-sm sm:text-base">Cancel</button>
+                <button type="submit" id="register-submit-btn" class="submit-btn hover-lift py-3 rounded-lg font-bold transition-all shadow-md text-sm sm:text-base">Join Community</button>
+            </div>
+        </form>
+
+        <div class="mt-6 text-center text-sm">
+            <span class="modal-footer-text">Already have an account?</span>
+            <button type="button" onclick="closeModal(); openSignInModal();" class="ml-1 modal-footer-link transition-colors font-semibold">Sign in here</button>
+        </div>
+    </div>
+</div>
+
+<script>
+function updateInstitutionLabel(role) {
+    const label = document.getElementById('institution-label');
+    const input = document.getElementById('institution-input');
+    if (role === 'professional') {
+        label.textContent = 'Company (Optional)';
+        input.placeholder = 'e.g., Google Inc.';
+    } else {
+        label.textContent = 'School/University (Optional)';
+        input.placeholder = 'e.g., University of the Philippines';
+    }
+}
+
+document.getElementById('register-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const btn = document.getElementById('register-submit-btn');
+    const errorBox = document.getElementById('register-error');
+    const errorText = document.getElementById('register-error-text');
+    const emailInput = document.getElementById('register-email');
+    const emailHint = document.getElementById('register-email-hint');
+    const csrfMeta = document.querySelector('meta[name="csrf-token"]');
+
+    btn.disabled = true;
+    btn.textContent = 'Creating account...';
+    errorBox.classList.add('hidden');
+    emailInput.classList.remove('border-red-500');
+    if (emailHint) emailHint.classList.remove('text-red-500');
+
+    const formData = new FormData(this);
+
+    try {
+        const response = await fetch(this.action, {
+            method: 'POST',
+            body: formData,
+            credentials: 'same-origin',
+            headers: { 
+                'X-Requested-With': 'XMLHttpRequest',
+                'Accept': 'application/json',
+                'X-CSRF-TOKEN': csrfMeta ? csrfMeta.getAttribute('content') : ''
+            }
+        });
+
+        if (response.status === 419) {
+            window.location.reload();
+            return;
+        }
+
+        if (response.redirected) {
+            window.location.replace(response.url);
+            return;
+        }
+
+        const data = await response.json();
+
+        if (data.status === 'success') {
+            btn.textContent = 'Redirecting...';
+            window.location.replace(data.redirect || '/community');
+            return;
+        }
+
+        if (data.field === 'email') {
+            emailInput.classList.add('border-red-500');
+        }
+        errorText.textContent = data.message || 'Something went wrong. Please try again.';
+        errorBox.classList.remove('hidden');
+        btn.disabled = false;
+        btn.textContent = 'Join Community';
+
+    } catch (err) {
+        errorText.textContent = 'Something went wrong. Please try again.';
+        errorBox.classList.remove('hidden');
+        btn.disabled = false;
+        btn.textContent = 'Join Community';
+    }
+});
+</script>    
+    <div id="chat-widget" class="fixed bottom-6 right-6 z-50 flex flex-col items-end font-sans">
+    
+    <div id="chat-window" class="hidden w-80 md:w-96 bg-white dark:bg-gray-900 shadow-2xl rounded-2xl border border-gray-200 flex flex-col mb-4 overflow-hidden transition-all duration-300">
+        
+        <div class="bg-white dark:bg-gray-900 border-b border-gray-200 p-4 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="relative">
+                    <img src="../../assets/images/jom.png" alt="Jomarie Tijada" class="chat-avatar w-10 h-10 rounded-full border border-gray-200 object-cover">
+                    <span class="chat-status-dot absolute bottom-0 right-0 w-3 h-3 bg-green-500 dark:bg-green-400 border-2 border-white dark:border-gray-900 rounded-full animate-pulse"></span>
+                </div>
+                <div>
+                    <h3 class="text-gray-900 dark:text-white font-bold text-sm">Chat with Jom</h3>
+                    <p class="text-gray-500 dark:text-gray-400 text-[10px] tracking-wider uppercase font-medium">Online</p>
+                </div>
+            </div>
+            <button id="close-chat" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition">
+                <i class="fas fa-times text-lg"></i>
+            </button>
+        </div>
+
+        <div id="chat-box" class="h-80 overflow-y-auto p-4 space-y-4 bg-gray-50 dark:bg-gray-950 flex flex-col scroll-smooth">
+            <div class="self-start bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 p-3 rounded-2xl rounded-tl-none border border-gray-200 text-sm shadow-sm max-w-[85%]">
+                Hi, I'm Jomarie Tijada, a Computer Science student focused on software development, AI, and data-related projects. I enjoy building practical systems that solve real problems.
+            </div>
+        </div>
+
+        <form id="chat-form" class="p-3 bg-white dark:bg-gray-900 border-t border-gray-200 flex gap-2">
+            <input type="hidden" name="_token" value="KVFoSIoz3hx3jYNxeSzD2qKtHWREk5AcgOfmlPLF" autocomplete="off">            <input type="text" id="message" autocomplete="off" class="flex-1 bg-gray-50 dark:bg-gray-800 border border-gray-200 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 text-gray-900 dark:text-gray-100 rounded-xl px-4 py-2 text-sm placeholder-gray-500 dark:placeholder-gray-400" placeholder="Type a message...">
+            <button type="submit" class="bg-black dark:bg-white text-white dark:text-black w-10 h-10 rounded-xl flex items-center justify-center transition hover:opacity-90">
+                <i class="fas fa-paper-plane text-sm"></i>
+            </button>
+        </form>
+    </div>
+
+    <button id="toggle-chat" class="bg-black text-white hover-lift rounded-full shadow-lg flex items-center gap-3 px-6 py-3.5 transition-all duration-300 transform active:scale-95">
+        <span class="chat-launcher-icon"><i class="fas fa-headset text-base"></i></span><span class="font-semibold text-sm">Chat with Jom</span>
+    </button>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const toggleBtn = document.getElementById('toggle-chat');
+        const closeBtn = document.getElementById('close-chat');
+        const chatWindow = document.getElementById('chat-window');
+        const chatForm = document.getElementById('chat-form');
+        const chatBox = document.getElementById('chat-box');
+        const messageInput = document.getElementById('message');
+
+        // Toggle visibility
+        toggleBtn.addEventListener('click', () => {
+            chatWindow.classList.remove('hidden');
+            messageInput.focus();
+        });
+
+        closeBtn.addEventListener('click', () => chatWindow.classList.add('hidden'));
+
+        // Background Check for Manual Telegram Replies
+        function startPollingForJom(chatId) {
+            const interval = setInterval(async () => {
+                try {
+                    const response = await fetch(`/chat/status/${chatId}`);
+                    const data = await response.json();
+
+                    if (data.is_replied && data.admin_reply) {
+                        clearInterval(interval);
+                        appendManualReply(data.admin_reply);
+
+                        const audio = new Audio('https://assets.mixkit.co/active_storage/sfx/2358/2358-preview.mp3');
+                        audio.volume = 0.2;
+                        audio.play();
+                    }
+                } catch (e) {
+                    console.error("Polling failed", e);
+                }
+            }, 5000);
+        }
+
+        // Add personal Telegram message to the UI
+        function appendManualReply(text) {
+            const replyId = 'jom-reply-' + Date.now();
+            chatBox.innerHTML += `
+                <div id="${replyId}" class="self-start bg-blue-50 dark:bg-blue-900/20 text-gray-900 dark:text-blue-100 p-3 rounded-2xl rounded-tl-none border-l-4 border-blue-600 shadow-sm max-w-[85%] transition-all duration-500 transform translate-x-1">
+                    <div class="flex items-center gap-1.5 mb-1">
+                        <span class="relative flex h-2 w-2">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                        </span>
+                        <div class="text-[9px] uppercase font-bold tracking-widest text-blue-600 dark:text-blue-400">Jom (Direct)</div>
+                    </div>
+                    <div class="text-sm leading-relaxed">${text}</div>
+                </div>`;
+            
+            chatBox.scrollTop = chatBox.scrollHeight;
+            
+            const replyElement = document.getElementById(replyId);
+            if(replyElement) {
+                replyElement.style.animation = 'pulse 0.5s ease-in-out';
+            }
+        }
+
+        // Handle Submission
+        chatForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const userMsg = messageInput.value.trim();
+            if (!userMsg) return;
+
+            // 1. Append User Message
+            chatBox.innerHTML += `
+                <div class="self-end bg-black text-white p-3 rounded-2xl rounded-tr-none text-sm max-w-[85%] shadow-md">
+                    ${userMsg}
+                </div>`;
+            
+            messageInput.value = '';
+            chatBox.scrollTop = chatBox.scrollHeight;
+
+            // 2. Prepare AI Bubble (Thinking State)
+            const aiBubbleId = 'ai-' + Date.now();
+            chatBox.innerHTML += `
+                <div id="${aiBubbleId}" class="self-start bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 p-3 rounded-2xl rounded-tl-none border border-gray-200 text-sm shadow-sm max-w-[85%]">
+                    <span class="animate-pulse text-gray-400">Typing...</span>
+                </div>`;
+            chatBox.scrollTop = chatBox.scrollHeight;
+            const aiBubble = document.getElementById(aiBubbleId);
+
+            try {
+                const response = await fetch('../../chat/send.html', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRF-TOKEN': 'KVFoSIoz3hx3jYNxeSzD2qKtHWREk5AcgOfmlPLF'
+                    },
+                    body: JSON.stringify({ message: userMsg })
+                });
+
+                // Check for Blocked IP status (403 Forbidden)
+                if (response.status === 403) {
+                    aiBubble.innerHTML = `<span class="text-red-500 font-bold italic text-xs">&#128683; You have been restricted from using the chat.</span>`;
+                    return;
+                }
+
+                if (!response.ok) throw new Error('Network error');
+
+                // START POLLING FOR MANUAL REPLY
+                const chatId = response.headers.get('X-Chat-ID');
+                if (chatId) {
+                    startPollingForJom(chatId);
+                }
+
+                // 3. Handle Streaming Response
+                const reader = response.body.getReader();
+                const decoder = new TextDecoder();
+                aiBubble.innerHTML = '';
+
+                while (true) {
+                    const { value, done } = await reader.read();
+                    if (done) break;
+                    
+                    const chunk = decoder.decode(value, { stream: true });
+                    aiBubble.innerText += chunk; 
+                    chatBox.scrollTop = chatBox.scrollHeight;
+                }
+
+            } catch (error) {
+                console.error('Chat Error:', error);
+                aiBubble.innerHTML = `<span class="text-red-500 italic text-xs">Jom is currently away. Please try again later.</span>`;
+            }
+        });
+    });
+</script>
+    <div class="flex-grow w-full">
+        
+<main class="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+    
+    <a href="../../community.html" class="inline-flex items-center gap-2 text-gray-600 transition nav-link group mb-8">
+        <i class="fas fa-arrow-left text-sm transition-transform group-hover:-translate-x-1"></i>
+        <span class="font-medium">Back to Community</span>
+    </a>
+
+    
+    <article class="bg-white rounded-lg border border-gray-200 p-6 sm:p-8 shadow-sm mb-8 fade-in relative text-left">
+        
+        <div class="flex items-center flex-wrap gap-x-2 gap-y-1 text-sm mb-6">
+            <span class="font-bold text-gray-900">
+                Jomarie Tijada
+            </span>
+            
+                            <i class="fas fa-circle-check text-blue-500 dark:text-blue-400 flex-shrink-0"></i>
+            
+            <span class="text-gray-400">•</span>
+            <span class="text-gray-500 text-xs">
+                2mos ago
+            </span>
+            
+                            <span class="text-gray-400">•</span>
+                <span class="text-gray-500 text-xs italic">Software Engineer</span>
+                    </div>
+
+        <h1 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 leading-tight">Called 2 Create</h1>
+
+        <div class="prose max-w-none mb-8">
+            <p class="text-gray-700 leading-relaxed whitespace-pre-wrap text-base sm:text-lg">Mindset before skillset. Character over credentials. Trusting Him through every pivot. Keep learning. Keep adapting. Keep trusting Him.</p>
+        </div>
+
+        <div class="flex items-center pt-6 border-t border-gray-100 text-sm">
+            <div class="flex items-center gap-1.5 text-gray-500">
+                <i class="far fa-comment"></i>
+                <span>0</span>
+            </div>
+        </div>
+    </article>
+
+    
+    <section class="bg-white rounded-lg border border-gray-200 p-6 sm:p-8 shadow-sm relative text-left">
+        <h2 class="text-xl font-bold text-gray-900 mb-6">Comments (0)</h2>
+
+                    <div class="mb-8 text-center py-4">
+                <button type="button" onclick="openSignInModal()" 
+                        class="register-btn hover-lift w-full sm:w-auto px-6 sm:px-10 py-3 rounded-lg font-bold transition-all shadow-sm flex items-center justify-center gap-2 mx-auto text-sm">
+                    <i class="fas fa-user text-xs"></i>
+                    Connect & Share Your Thoughts
+                </button>
+            </div>
+        
+        <div class="space-y-6">
+                            <p class="text-center text-gray-500 py-4 text-sm">No comments yet. Be the first to start the conversation!</p>
+                    </div>
+    </section>
+</main>
+    </div>
+
+    <footer class="bg-white mt-6 transition-colors duration-300 relative">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-[1px] 
+                bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
+    
+    <div class="max-w-4xl mx-auto px-6 py-5">
+        <div class="flex flex-col items-center justify-center gap-1 text-center">
+            <p class="text-sm text-gray-900 dark:text-white font-normal">
+                &copy; 2026 Jomarie Salvio Tijada. All Rights Reserved.
+            </p>
+            <p class="text-sm text-gray-900 dark:text-white font-normal">
+                Developed in San Juan, Ilocos Sur, Philippines
+            </p>
+        </div>
+    </div>
+</footer>
+    <div id="certModal" class="fixed inset-0 z-[150] hidden items-center justify-center bg-black/80 backdrop-blur-sm p-4" onclick="closeCertModal()">
+        <div class="relative max-w-4xl w-full" onclick="event.stopPropagation()">
+            <button class="absolute -top-12 right-0 text-white text-xl font-bold hover:text-gray-300" onclick="closeCertModal()">&times;</button>
+            <img id="modalImage" src="#" alt="Certification" class="w-full h-auto rounded-xl shadow-2xl border border-white/10">
+        </div>
+    </div>
+
+    <!-- Gallery Lightbox Modal -->
+    <div id="galleryModal" class="fixed inset-0 z-[150] hidden items-center justify-center bg-black/90 backdrop-blur-sm" onclick="closeGalleryModal()">
+        <div class="relative max-w-6xl w-full h-full flex items-center justify-center p-4">
+            <button class="absolute top-4 right-4 text-white hover:text-gray-300 transition text-lg flex items-center gap-2" onclick="closeGalleryModal()">
+                <span class="text-2xl font-bold">&times;</span>
+            </button>
+            
+            <!-- Previous Button -->
+            <button onclick="previousGalleryImage(); event.stopPropagation();" class="absolute left-4 w-10 h-10 sm:w-12 sm:h-12 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-full shadow-lg flex items-center justify-center hover:bg-white dark:hover:bg-gray-700 transition-colors border border-gray-200 dark:border-gray-600">
+                <i class="fas fa-angle-left text-gray-700 dark:text-gray-200 text-xl"></i>
+            </button>
+            
+            <!-- Image -->
+            <div class="max-w-5xl max-h-[90vh] flex items-center justify-center" onclick="event.stopPropagation()">
+                <img id="galleryModalImage" src="#" alt="Gallery" class="max-w-full max-h-[90vh] w-auto h-auto rounded-lg shadow-2xl">
+            </div>
+            
+            <!-- Next Button -->
+            <button onclick="nextGalleryImage(); event.stopPropagation();" class="absolute right-4 w-10 h-10 sm:w-12 sm:h-12 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-full shadow-lg flex items-center justify-center hover:bg-white dark:hover:bg-gray-700 transition-colors border border-gray-200 dark:border-gray-600">
+                <i class="fas fa-angle-right text-gray-700 dark:text-gray-200 text-xl"></i>
+            </button>
+            
+            <!-- Image Counter -->
+            <div class="absolute bottom-4 left-1/2 -translate-x-1/2 text-white text-sm bg-black/50 px-4 py-2 rounded-full" onclick="event.stopPropagation()">
+                <span id="galleryCounter">1 / 1</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../assets/js/theme.js?v=2" defer></script>
+            <script src="../../assets/js/chatbotKnowledge.js?v=3" defer></script>
+<script src="../../assets/js/chat-widget.js?v=10" defer></script>
+<script src="../../assets/js/script.js?v=3" defer></script>
+    <script src="../../assets/js/community.js?v=2" defer></script>
+
+    <script>
+        window.openCertModal = function(imgSrc) {
+            const modal = document.getElementById('certModal');
+            const modalImg = document.getElementById('modalImage'); 
+            if (modal && modalImg) {
+                modalImg.src = imgSrc;
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        window.closeCertModal = function() {
+            const modal = document.getElementById('certModal'); 
+            if (modal) {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeCertModal();
+                closeGalleryModal();
+                if (typeof closeEditPostModal === 'function') closeEditPostModal();
+                if (typeof closeDeleteConfirmModal === 'function') closeDeleteConfirmModal();
+                if (typeof closeCreatePostModal === 'function') closeCreatePostModal();
+            }
+            
+            // Gallery navigation with arrow keys
+            const galleryModal = document.getElementById('galleryModal');
+            if (galleryModal && !galleryModal.classList.contains('hidden')) {
+                if (e.key === 'ArrowLeft') {
+                    previousGalleryImage();
+                } else if (e.key === 'ArrowRight') {
+                    nextGalleryImage();
+                }
+            }
+        });
+
+        // Gallery Modal Functions
+        let currentGalleryIndex = 0;
+        let galleryImages = [];
+
+        window.openGalleryModal = function(imgSrc, images) {
+            galleryImages = images;
+            currentGalleryIndex = images.indexOf(imgSrc);
+            const modal = document.getElementById('galleryModal');
+            const modalImg = document.getElementById('galleryModalImage');
+            const counter = document.getElementById('galleryCounter');
+            
+            if (modal && modalImg) {
+                modalImg.src = imgSrc;
+                counter.textContent = `${currentGalleryIndex + 1} / ${galleryImages.length}`;
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        window.closeGalleryModal = function() {
+            const modal = document.getElementById('galleryModal');
+            if (modal) {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        window.nextGalleryImage = function() {
+            if (galleryImages.length === 0) return;
+            currentGalleryIndex = (currentGalleryIndex + 1) % galleryImages.length;
+            const modalImg = document.getElementById('galleryModalImage');
+            const counter = document.getElementById('galleryCounter');
+            if (modalImg) {
+                modalImg.src = galleryImages[currentGalleryIndex];
+                counter.textContent = `${currentGalleryIndex + 1} / ${galleryImages.length}`;
+            }
+        }
+
+        window.previousGalleryImage = function() {
+            if (galleryImages.length === 0) return;
+            currentGalleryIndex = (currentGalleryIndex - 1 + galleryImages.length) % galleryImages.length;
+            const modalImg = document.getElementById('galleryModalImage');
+            const counter = document.getElementById('galleryCounter');
+            if (modalImg) {
+                modalImg.src = galleryImages[currentGalleryIndex];
+                counter.textContent = `${currentGalleryIndex + 1} / ${galleryImages.length}`;
+            }
+        }
+    </script>
+
+    <button id="scrollToTop" 
+        title="Back to Top"
+        class="fixed bottom-28 right-6 z-[40] hidden w-12 h-12 items-center justify-center shrink-0 rounded-full transition-all duration-300 shadow-lg
+            bg-black text-white hover:bg-zinc-800 hover:scale-110">
+        <i class="fas fa-chevron-up text-lg"></i>
+    </button>
+    
+    </body>
+
+
+</html>

@@ -1,0 +1,1383 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="KVFoSIoz3hx3jYNxeSzD2qKtHWREk5AcgOfmlPLF">
+
+    <script>
+    (function() {
+        const isCommunity = window.location.pathname.includes('/community');
+        const themeKey = isCommunity ? 'community_theme' : 'theme';
+        const savedTheme = localStorage.getItem(themeKey);
+        
+        if (savedTheme === 'dark') {
+            document.documentElement.classList.add('dark');
+        } else if (savedTheme === 'light') {
+            document.documentElement.classList.remove('dark');
+        } else {
+            if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.documentElement.classList.add('dark');
+            }
+        }
+    })();
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Jomarie Salvio Tijada",
+        "url": "./",
+        "image": "assets/images/jom.png",
+        "jobTitle": "Aspiring Software Engineer, Java, Python, Flutter Developer",
+        "description": "Jomarie Salvio Tijada (Jom) is a Computer Science student and aspiring Software Engineer from San Juan, Ilocos Sur, specializing in Java, Python, Flutter, and Firebase.",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "San Juan, Ilocos Sur",
+            "addressRegion": "Ilocos Sur",
+            "addressCountry": "PH"
+        },
+        "colloquialName": "Jomarie Tijada",
+        "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "University of Northern Philippines"
+        },
+        "sameAs": [
+            "https://github.com/enjomcoding",
+            "https://github.com/enjomcoding" 
+        ],
+        "knowsAbout": ["Java", "Flutter", "Firebase Design", "Python", "Mobile Development", "Firebase Integration", "Software Engineering"]
+    }
+    </script>
+    
+        
+    <title>PawsitiveCare Case Study | Jomarie Salvio Tijada</title>
+    <meta name="title" content="PawsitiveCare Case Study | Jomarie Salvio Tijada">
+    <meta name="description" content="PawsitiveCare is a Java-based veterinary clinic management system built by Jomarie Salvio Tijada. Featuring digital pet records, automated appointment scheduling, and clean full-stack architecture.">
+    <meta name="keywords" content="Jomarie Salvio Tijada, Jomarie Tijada, Jomarie Salvio Tijada San Juan Ilocos Sur, Software Engineer Philippines, CS Student Ilocos Sur, Jomarie Tijada Portfolio, Jomarie Salvio Tijada Portfolio, Flutter Developer Philippines, Java Developer, Python Developer">
+    <meta name="author" content="Jomarie Salvio Tijada">
+
+    <link rel="icon" type="image/png" href="assets/images/jom.png">
+    <link rel="shortcut icon" href="assets/images/jom.png" type="image/png">
+    <link rel="apple-touch-icon" href="assets/images/jom.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="./">
+    <meta property="og:title" content="Jomarie Salvio Tijada | Aspiring Software Engineer | Java | Python | Flutter">
+    <meta property="og:description" content="Computer Science student and aspiring Software Engineer from San Juan, Ilocos Sur, building projects with Java, Python, Flutter, and Firebase.">
+    <meta property="og:image" content="assets/images/jom.png">
+    <meta property="og:image:secure_url" content="assets/images/jom.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="./">
+    <meta name="twitter:title" content="Jomarie Salvio Tijada | Aspiring Software Engineer | Java | Python | Flutter">
+    <meta name="twitter:description" content="Computer Science student and aspiring Software Engineer from San Juan, Ilocos Sur, building projects with Java, Python, Flutter, and Firebase.">
+    <meta name="twitter:image" content="assets/images/jom.png">
+
+    <link rel="canonical" href="pawsitivecare.html">
+
+    <meta name="geo.region" content="PH-00">
+    <meta name="geo.placename" content="San Juan, Ilocos Sur">
+    <meta name="geo.position" content="14.6061;121.0315">
+    <meta name="ICBM" content="14.6061, 121.0315">
+        
+    
+    <script src="https://cdn.tailwindcss.com/"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" 
+          integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/style.css?v=6">
+</head>
+<body class="antialiased bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-white min-h-screen flex flex-col">
+
+    
+            <div id="signInModal" class="modal">
+    
+    <div class="signin-card w-[92%] max-w-md mx-auto bg-white dark:bg-gray-800 rounded-xl p-6 sm:p-8 relative" onclick="event.stopPropagation()">
+        <button type="button" 
+            class="close-btn absolute top-4 right-4 z-[1010] p-2 text-2xl font-bold leading-none text-gray-500 hover:text-black dark:hover:text-white transition-colors" 
+            onclick="closeSignInModal()">
+            &times;
+        </button>
+        
+        <h2 class="text-xl sm:text-2xl font-bold mb-6 text-black dark:text-white text-center">Sign In</h2>
+
+        <div id="signin-error" class="hidden error-message bg-red-100 text-red-600 p-3 rounded-lg mb-4 text-sm flex items-center">
+            <i class="fas fa-exclamation-circle mr-2 flex-shrink-0"></i>
+            <span id="signin-error-text"></span>
+        </div>
+
+        <form id="signin-form" action="./login" method="POST" autocomplete="on">
+            <input type="hidden" name="_token" value="KVFoSIoz3hx3jYNxeSzD2qKtHWREk5AcgOfmlPLF" autocomplete="off">            <div class="mb-4 text-left">
+                <label class="text-sm font-medium text-black dark:text-white">Email Address</label>
+                <input type="email" 
+                    name="email" 
+                    id="email"
+                    autocomplete="email"
+                    class="signin-input w-full" 
+                    required>
+            </div>
+            
+            <div class="mb-6 text-left">
+                <label class="text-sm font-medium text-black dark:text-white">Password</label>
+                <div class="password-wrapper relative">
+                    <input type="password" 
+                        name="password" 
+                        id="signin-pass"
+                        class="signin-input w-full pr-10" 
+                        autocomplete="current-password" 
+                        required>
+                    <i class="fas fa-eye toggle-password absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer text-gray-400" onclick="togglePass()"></i>
+                </div>
+            </div>
+            
+            <button type="submit" id="signin-submit-btn" class="register-btn hover-lift w-full py-3 rounded-lg font-bold transition-all shadow-md hover:shadow-lg text-sm sm:text-base">
+                Sign In
+            </button>
+        </form>
+        
+        <div class="mt-8 text-center text-sm">
+            <span class="modal-footer-text text-gray-600 dark:text-gray-400">Need an account?</span>
+            <button type="button" onclick="closeSignInModal(); openModal();" class="ml-1 modal-footer-link transition-colors font-bold">
+                Register here
+            </button>
+        </div>
+    </div>
+</div>
+
+<script>
+document.getElementById('signin-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const btn = document.getElementById('signin-submit-btn');
+    const errorBox = document.getElementById('signin-error');
+    const errorText = document.getElementById('signin-error-text');
+    const csrfMeta = document.querySelector('meta[name="csrf-token"]');
+
+    btn.disabled = true;
+    btn.textContent = 'Signing in...';
+    errorBox.classList.add('hidden');
+
+    try {
+        const formData = new FormData(this);
+
+        const response = await fetch(this.action, {
+            method: 'POST',
+            body: formData,
+            credentials: 'same-origin',
+            headers: { 
+                'X-Requested-With': 'XMLHttpRequest',
+                'Accept': 'application/json',
+                'X-CSRF-TOKEN': csrfMeta ? csrfMeta.getAttribute('content') : ''
+            }
+        });
+
+        if (response.status === 419) {
+            window.location.reload();
+            return;
+        }
+
+        if (response.redirected) {
+            window.location.replace(response.url);
+            return;
+        }
+
+        const data = await response.json();
+
+        if (data.status === 'success') {
+            btn.textContent = 'Redirecting...';
+            window.location.replace(data.redirect || '/community');
+            return;
+        }
+
+        errorText.textContent = data.message || 'Invalid email or password.';
+        errorBox.classList.remove('hidden');
+        btn.disabled = false;
+        btn.textContent = 'Sign In';
+
+    } catch (err) {
+        console.error('Login error:', err);
+        errorText.textContent = 'Network error. Please check your connection.';
+        errorBox.classList.remove('hidden');
+        btn.disabled = false;
+        btn.textContent = 'Sign In';
+    }
+});
+</script>        <div id="registerModal" class="modal">
+
+    <div class="register-card w-[95%] max-w-xl mx-auto bg-white dark:bg-gray-800 rounded-xl p-5 sm:p-8 overflow-y-auto max-h-[95vh] relative" onclick="event.stopPropagation()">
+        <button type="button" 
+            class="close-btn absolute top-4 right-4 z-[1010] p-2 text-2xl font-bold leading-none text-gray-500 hover:text-black dark:hover:text-white transition-colors" 
+            onclick="closeModal()">
+            &times;
+        </button>
+    
+        <h2 class="text-xl sm:text-2xl font-bold mb-6 text-black dark:text-white text-center">Join the Community</h2>
+
+        <div id="register-error" class="hidden error-message bg-red-100 text-red-600 p-3 rounded-lg mb-4 text-sm flex items-center">
+            <i class="fas fa-exclamation-circle mr-2 flex-shrink-0"></i>
+            <span id="register-error-text"></span>
+        </div>
+        
+        <form id="register-form" action="./register" method="POST">
+            <input type="hidden" name="_token" value="KVFoSIoz3hx3jYNxeSzD2qKtHWREk5AcgOfmlPLF" autocomplete="off">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                <div class="text-left">
+                    <label class="text-sm font-medium text-black dark:text-white">First Name</label>
+                    <input type="text" name="first_name" class="register-input w-full" required>
+                </div>
+                <div class="text-left">
+                    <label class="text-sm font-medium text-black dark:text-white">Last Name</label>
+                    <input type="text" name="last_name" class="register-input w-full" required>
+                </div>
+            </div>
+
+            <div class="mb-4 text-left">
+                <label class="text-sm font-medium text-black dark:text-white">Email Address</label>
+                <input type="email" name="email" id="register-email" class="register-input w-full" required>
+                <p id="register-email-hint" class="text-xs text-gray-600 dark:text-gray-400 mt-1">This will be your sign-in email</p>
+            </div>
+
+            <div class="mb-4 text-left">
+                <label class="text-sm font-medium text-black dark:text-white">Password</label>
+                <div class="password-wrapper relative">
+                    <input type="password" id="register-pass" name="password" class="register-input w-full pr-10" minlength="6" required>
+                    <i class="fas fa-eye toggle-password-register absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer" onclick="toggleRegisterPass()"></i>
+                </div>
+                <p class="text-xs text-gray-600 dark:text-gray-400 mt-1">Must be at least 6 characters long</p>
+            </div>
+
+            <div class="mb-4 text-left">
+                <label class="text-sm font-medium text-black dark:text-white mb-2 block">I am a</label>
+                <div class="grid grid-cols-2 gap-3">
+                    <label class="role-option flex items-center justify-center gap-2 p-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg cursor-pointer transition-all">
+                        <input type="radio" name="user_role" value="student" class="hidden" required onchange="updateInstitutionLabel('student')">
+                        <i class="fas fa-graduation-cap text-sm role-icon"></i>
+                        <span class="font-semibold text-xs sm:text-sm role-text">Student</span>
+                    </label>
+                    <label class="role-option flex items-center justify-center gap-2 p-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg cursor-pointer transition-all">
+                        <input type="radio" name="user_role" value="professional" class="hidden" required onchange="updateInstitutionLabel('professional')">
+                        <i class="fas fa-briefcase text-sm role-icon"></i>
+                        <span class="font-semibold text-xs sm:text-sm role-text">Professional</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="mb-6 text-left">
+                <label id="institution-label" class="text-sm font-medium text-black dark:text-white">School/University (Optional)</label>
+                <input type="text" id="institution-input" name="institution" class="register-input w-full" placeholder="e.g., University of the Philippines">
+            </div>
+
+            <div class="flex flex-col-reverse sm:grid sm:grid-cols-2 gap-3">
+                <button type="button" onclick="closeModal()" class="cancel-btn py-3 rounded-lg font-medium transition-all text-sm sm:text-base">Cancel</button>
+                <button type="submit" id="register-submit-btn" class="submit-btn hover-lift py-3 rounded-lg font-bold transition-all shadow-md text-sm sm:text-base">Join Community</button>
+            </div>
+        </form>
+
+        <div class="mt-6 text-center text-sm">
+            <span class="modal-footer-text">Already have an account?</span>
+            <button type="button" onclick="closeModal(); openSignInModal();" class="ml-1 modal-footer-link transition-colors font-semibold">Sign in here</button>
+        </div>
+    </div>
+</div>
+
+<script>
+function updateInstitutionLabel(role) {
+    const label = document.getElementById('institution-label');
+    const input = document.getElementById('institution-input');
+    if (role === 'professional') {
+        label.textContent = 'Company (Optional)';
+        input.placeholder = 'e.g., Google Inc.';
+    } else {
+        label.textContent = 'School/University (Optional)';
+        input.placeholder = 'e.g., University of the Philippines';
+    }
+}
+
+document.getElementById('register-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const btn = document.getElementById('register-submit-btn');
+    const errorBox = document.getElementById('register-error');
+    const errorText = document.getElementById('register-error-text');
+    const emailInput = document.getElementById('register-email');
+    const emailHint = document.getElementById('register-email-hint');
+    const csrfMeta = document.querySelector('meta[name="csrf-token"]');
+
+    btn.disabled = true;
+    btn.textContent = 'Creating account...';
+    errorBox.classList.add('hidden');
+    emailInput.classList.remove('border-red-500');
+    if (emailHint) emailHint.classList.remove('text-red-500');
+
+    const formData = new FormData(this);
+
+    try {
+        const response = await fetch(this.action, {
+            method: 'POST',
+            body: formData,
+            credentials: 'same-origin',
+            headers: { 
+                'X-Requested-With': 'XMLHttpRequest',
+                'Accept': 'application/json',
+                'X-CSRF-TOKEN': csrfMeta ? csrfMeta.getAttribute('content') : ''
+            }
+        });
+
+        if (response.status === 419) {
+            window.location.reload();
+            return;
+        }
+
+        if (response.redirected) {
+            window.location.replace(response.url);
+            return;
+        }
+
+        const data = await response.json();
+
+        if (data.status === 'success') {
+            btn.textContent = 'Redirecting...';
+            window.location.replace(data.redirect || '/community');
+            return;
+        }
+
+        if (data.field === 'email') {
+            emailInput.classList.add('border-red-500');
+        }
+        errorText.textContent = data.message || 'Something went wrong. Please try again.';
+        errorBox.classList.remove('hidden');
+        btn.disabled = false;
+        btn.textContent = 'Join Community';
+
+    } catch (err) {
+        errorText.textContent = 'Something went wrong. Please try again.';
+        errorBox.classList.remove('hidden');
+        btn.disabled = false;
+        btn.textContent = 'Join Community';
+    }
+});
+</script>    
+    <div id="chat-widget" class="fixed bottom-6 right-6 z-50 flex flex-col items-end font-sans">
+    
+    <div id="chat-window" class="hidden w-80 md:w-96 bg-white dark:bg-gray-900 shadow-2xl rounded-2xl border border-gray-200 flex flex-col mb-4 overflow-hidden transition-all duration-300">
+        
+        <div class="bg-white dark:bg-gray-900 border-b border-gray-200 p-4 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="relative">
+                    <img src="assets/images/jom.png" alt="Jomarie Tijada" class="chat-avatar w-10 h-10 rounded-full border border-gray-200 object-cover">
+                    <span class="chat-status-dot absolute bottom-0 right-0 w-3 h-3 bg-green-500 dark:bg-green-400 border-2 border-white dark:border-gray-900 rounded-full animate-pulse"></span>
+                </div>
+                <div>
+                    <h3 class="text-gray-900 dark:text-white font-bold text-sm">Chat with Jom</h3>
+                    <p class="text-gray-500 dark:text-gray-400 text-[10px] tracking-wider uppercase font-medium">Online</p>
+                </div>
+            </div>
+            <button id="close-chat" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition">
+                <i class="fas fa-times text-lg"></i>
+            </button>
+        </div>
+
+        <div id="chat-box" class="h-80 overflow-y-auto p-4 space-y-4 bg-gray-50 dark:bg-gray-950 flex flex-col scroll-smooth">
+            <div class="self-start bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 p-3 rounded-2xl rounded-tl-none border border-gray-200 text-sm shadow-sm max-w-[85%]">
+                Hi, I'm Jomarie Tijada, a Computer Science student focused on software development, AI, and data-related projects. I enjoy building practical systems that solve real problems.
+            </div>
+        </div>
+
+        <form id="chat-form" class="p-3 bg-white dark:bg-gray-900 border-t border-gray-200 flex gap-2">
+            <input type="hidden" name="_token" value="KVFoSIoz3hx3jYNxeSzD2qKtHWREk5AcgOfmlPLF" autocomplete="off">            <input type="text" id="message" autocomplete="off" class="flex-1 bg-gray-50 dark:bg-gray-800 border border-gray-200 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 text-gray-900 dark:text-gray-100 rounded-xl px-4 py-2 text-sm placeholder-gray-500 dark:placeholder-gray-400" placeholder="Type a message...">
+            <button type="submit" class="bg-black dark:bg-white text-white dark:text-black w-10 h-10 rounded-xl flex items-center justify-center transition hover:opacity-90">
+                <i class="fas fa-paper-plane text-sm"></i>
+            </button>
+        </form>
+    </div>
+
+    <button id="toggle-chat" class="bg-black text-white hover-lift rounded-full shadow-lg flex items-center gap-3 px-6 py-3.5 transition-all duration-300 transform active:scale-95">
+        <span class="chat-launcher-icon"><i class="fas fa-headset text-base"></i></span><span class="font-semibold text-sm">Chat with Jom</span>
+    </button>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const toggleBtn = document.getElementById('toggle-chat');
+        const closeBtn = document.getElementById('close-chat');
+        const chatWindow = document.getElementById('chat-window');
+        const chatForm = document.getElementById('chat-form');
+        const chatBox = document.getElementById('chat-box');
+        const messageInput = document.getElementById('message');
+
+        // Toggle visibility
+        toggleBtn.addEventListener('click', () => {
+            chatWindow.classList.remove('hidden');
+            messageInput.focus();
+        });
+
+        closeBtn.addEventListener('click', () => chatWindow.classList.add('hidden'));
+
+        // Background Check for Manual Telegram Replies
+        function startPollingForJom(chatId) {
+            const interval = setInterval(async () => {
+                try {
+                    const response = await fetch(`/chat/status/${chatId}`);
+                    const data = await response.json();
+
+                    if (data.is_replied && data.admin_reply) {
+                        clearInterval(interval);
+                        appendManualReply(data.admin_reply);
+
+                        const audio = new Audio('https://assets.mixkit.co/active_storage/sfx/2358/2358-preview.mp3');
+                        audio.volume = 0.2;
+                        audio.play();
+                    }
+                } catch (e) {
+                    console.error("Polling failed", e);
+                }
+            }, 5000);
+        }
+
+        // Add personal Telegram message to the UI
+        function appendManualReply(text) {
+            const replyId = 'jom-reply-' + Date.now();
+            chatBox.innerHTML += `
+                <div id="${replyId}" class="self-start bg-blue-50 dark:bg-blue-900/20 text-gray-900 dark:text-blue-100 p-3 rounded-2xl rounded-tl-none border-l-4 border-blue-600 shadow-sm max-w-[85%] transition-all duration-500 transform translate-x-1">
+                    <div class="flex items-center gap-1.5 mb-1">
+                        <span class="relative flex h-2 w-2">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                        </span>
+                        <div class="text-[9px] uppercase font-bold tracking-widest text-blue-600 dark:text-blue-400">Jom (Direct)</div>
+                    </div>
+                    <div class="text-sm leading-relaxed">${text}</div>
+                </div>`;
+            
+            chatBox.scrollTop = chatBox.scrollHeight;
+            
+            const replyElement = document.getElementById(replyId);
+            if(replyElement) {
+                replyElement.style.animation = 'pulse 0.5s ease-in-out';
+            }
+        }
+
+        // Handle Submission
+        chatForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const userMsg = messageInput.value.trim();
+            if (!userMsg) return;
+
+            // 1. Append User Message
+            chatBox.innerHTML += `
+                <div class="self-end bg-black text-white p-3 rounded-2xl rounded-tr-none text-sm max-w-[85%] shadow-md">
+                    ${userMsg}
+                </div>`;
+            
+            messageInput.value = '';
+            chatBox.scrollTop = chatBox.scrollHeight;
+
+            // 2. Prepare AI Bubble (Thinking State)
+            const aiBubbleId = 'ai-' + Date.now();
+            chatBox.innerHTML += `
+                <div id="${aiBubbleId}" class="self-start bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 p-3 rounded-2xl rounded-tl-none border border-gray-200 text-sm shadow-sm max-w-[85%]">
+                    <span class="animate-pulse text-gray-400">Typing...</span>
+                </div>`;
+            chatBox.scrollTop = chatBox.scrollHeight;
+            const aiBubble = document.getElementById(aiBubbleId);
+
+            try {
+                const response = await fetch('chat/send.html', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRF-TOKEN': 'KVFoSIoz3hx3jYNxeSzD2qKtHWREk5AcgOfmlPLF'
+                    },
+                    body: JSON.stringify({ message: userMsg })
+                });
+
+                // Check for Blocked IP status (403 Forbidden)
+                if (response.status === 403) {
+                    aiBubble.innerHTML = `<span class="text-red-500 font-bold italic text-xs">&#128683; You have been restricted from using the chat.</span>`;
+                    return;
+                }
+
+                if (!response.ok) throw new Error('Network error');
+
+                // START POLLING FOR MANUAL REPLY
+                const chatId = response.headers.get('X-Chat-ID');
+                if (chatId) {
+                    startPollingForJom(chatId);
+                }
+
+                // 3. Handle Streaming Response
+                const reader = response.body.getReader();
+                const decoder = new TextDecoder();
+                aiBubble.innerHTML = '';
+
+                while (true) {
+                    const { value, done } = await reader.read();
+                    if (done) break;
+                    
+                    const chunk = decoder.decode(value, { stream: true });
+                    aiBubble.innerText += chunk; 
+                    chatBox.scrollTop = chatBox.scrollHeight;
+                }
+
+            } catch (error) {
+                console.error('Chat Error:', error);
+                aiBubble.innerHTML = `<span class="text-red-500 italic text-xs">Jom is currently away. Please try again later.</span>`;
+            }
+        });
+    });
+</script>
+    <div class="flex-grow w-full">
+        <main class="max-w-5xl mx-auto px-4 py-12">
+    <!-- Header -->
+    <div class="mb-8 md:mb-12 fade-in px-4 md:px-0">
+        <a href="index.html" class="inline-flex items-center gap-2 text-sm md:text-base text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition group">
+            <i class="fas fa-arrow-left text-xs md:text-sm transition-transform group-hover:-translate-x-1"></i>
+            <span class="font-medium">Back to Home</span>
+        </a>
+
+        <div class="w-full mb-8 md:mb-12"> 
+            <h1 class="text-3xl md:text-4xl font-bold mt-6 md:mt-8 text-gray-900 dark:text-white text-balance leading-tight">
+                PawsitiveCare: Pet Management System
+            </h1>
+            
+            <p class="text-sm md:text-base text-gray-600 dark:text-gray-400 mt-3 md:mt-4 max-w-2xl">
+                A comprehensive management platform for veterinary clinics to digitize pet records, track appointment lifecycles, and automate client communication.
+            </p>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <!-- Sidebar - Sticky -->
+        <div class="lg:col-span-1">
+            <div class="lg:sticky lg:top-4 space-y-8 fade-in">
+                <section class="bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-200 p-6 fade-in hover-lift hover:shadow-xl">
+                    <h3 class="text-sm font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-4">Project Overview</h3>
+                    <ul class="space-y-3 text-gray-700 dark:text-gray-300">
+                        <li class="flex justify-between">
+                            <span class="font-medium text-sm">Lead Developer</span>
+                            <span class="text-sm">Jomarie Salvio Tijada</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span class="font-medium text-sm">Architecture</span>
+                            <span class="text-sm">Independent Refactor</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span class="font-medium text-sm">Type</span>
+                            <span class="text-sm">Web Platform</span>
+                        </li>
+                        
+                        <li class="pt-3 border-t border-gray-100 dark:border-gray-200">
+                            <span class="font-medium text-xs uppercase tracking-tight text-gray-400">Original PHP Foundation</span>
+                            <p class="mt-1 text-xs text-gray-500 italic mb-2">Developed in collaboration with:</p>
+                            <div class="space-y-1 text-xs text-gray-500 dark:text-gray-400">
+                                <p>Daniecy Calica</p>
+                                <p>Eric Ebuna</p>
+                                <p>Lyeanne Gadiano</p>
+                                <p>Krissha Monte</p>
+                            </div>
+                        </li>
+                    </ul>
+            </section>
+
+                <section class="bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-200 p-6 fade-in hover-lift hover:shadow-xl">
+                    <h3 class="text-sm font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-4">Tech Stack</h3>
+                    <div class="flex flex-wrap gap-2">
+                    <span class="tech-tag">Java 12</span>
+                        <span class="tech-tag">PHP 8.2</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">Supabase</span>
+                        <span class="tech-tag">Tailwind CSS</span>
+                        <span class="tech-tag">Chart.js</span>
+                        <span class="tech-tag">FullCalendar 6</span>
+                        <span class="tech-tag">DomPDF</span>
+                        <span class="tech-tag">Gmail SMTP</span>
+                        <span class="tech-tag">FontAwesome</span>
+                    </div>
+                </section>
+
+                <section class="bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-200 p-6 fade-in hover-lift hover:shadow-xl">
+                    <h3 class="text-sm font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-4">Key Features</h3>
+                    <ul class="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span>Pet Profile Management</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span>Appointment Lifecycle</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span>Role-Based Access Control</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span>Medical History PDFs</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span>Email & Dashboard Notifications</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span>Real-Time Status Tracking</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span>Pet Birthday Countdowns</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span>Inquiry Management</span>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="lg:col-span-2 space-y-12 fade-in">
+            <!-- System Objectives -->
+            <section>
+                <h2 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">System Objectives</h2>
+                <div class="text-gray-600 dark:text-gray-400 space-y-4">
+                    <p>PawsitiveCare was designed to replace manual paperwork with a secure digital ecosystem, built around three core objectives:</p>
+                    <div class="grid grid-cols-1 gap-4">
+                        <div class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-gray-200 dark:border-gray-200">
+                            <h4 class="font-bold text-gray-900 dark:text-white mb-2">Secure Digital Management</h4>
+                            <p class="text-sm">Maintain accurate pet identification, medical histories, and vaccination records with robust security measures.</p>
+                        </div>
+                        <div class="p-4 bg-green-50 dark:bg-green-900/20 rounded-lg border border-gray-200 dark:border-gray-200">
+                            <h4 class="font-bold text-gray-900 dark:text-white mb-2">Operational Efficiency</h4>
+                            <p class="text-sm">Enhance coordination between clients and veterinary staff through efficient appointment scheduling and clinic operations.</p>
+                        </div>
+                        <div class="p-4 bg-purple-50 dark:bg-purple-900/20 rounded-lg border border-gray-200 dark:border-gray-200">
+                            <h4 class="font-bold text-gray-900 dark:text-white mb-2">Clinic Productivity</h4>
+                            <p class="text-sm">Improve overall productivity through organized workflows, system scalability, and data-driven decision-making.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Home/Landing Page Section -->
+            <section>
+                <h2 class="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Public Landing Page</h2>
+                <div class="space-y-6">
+                    <div>
+                        <img src="assets/images/pawsitivecare/Home-PawsitiveCare.jpg" 
+                            alt="Landing Page Hero" 
+                            class="w-full rounded-lg border border-gray-200 dark:border-gray-200 shadow-sm cursor-pointer hover:shadow-lg transition-shadow" 
+                            onclick="openImageModal(this.src, this.alt)">
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <img src="assets/images/pawsitivecare/Contact-PawsitiveCare.jpg" 
+                                alt="Contact" 
+                                class="rounded-lg border border-gray-200 dark:border-gray-200 shadow-sm cursor-pointer hover:shadow-lg transition-shadow" 
+                                onclick="openImageModal(this.src, this.alt)">
+                        </div>
+
+                        <div>
+                            <img src="assets/images/pawsitivecare/Contact-Success-PawsitiveCare.jpg" 
+                                alt="Contact Success" 
+                                class="rounded-lg border border-gray-200 dark:border-gray-200 shadow-sm cursor-pointer hover:shadow-lg transition-shadow" 
+                                onclick="openImageModal(this.src, this.alt)">
+                        </div>
+                    </div>
+
+                    <div class="mt-8 pt-6 border-t border-gray-200 dark:border-gray-200">
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-3">
+                            <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
+                                <i class="fas fa-mobile-alt text-orange-500 mt-1"></i>
+                                <span><strong>Mobile-Optimized Design:</strong> The landing page is fully responsive and includes dedicated sections for About Us, Services, Contact, and Login.</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
+                                <i class="fas fa-paper-plane text-orange-500 mt-1"></i>
+                                <span><strong>Interactive Inquiry System:</strong> Features a custom UI script to manage submission states, toggling button text to 'Sending' and triggering success alerts.</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
+                                <i class="fas fa-envelope-open-text text-orange-500 mt-1"></i>
+                                <span><strong>Omnichannel Notifications:</strong> Administrators and staff receive inquiries via official admin email and the dashboard message center for effective communication.</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
+                                <i class="fas fa-user-check text-orange-500 mt-1"></i>
+                                <span><strong>Secure Contact Access:</strong> To maintain data quality, the contact form is restricted to users whose email addresses are already registered in the system.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Authentication -->
+            <section>
+                <h2 class="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Authentication System</h2>
+                <p class="text-sm text-gray-600 dark:text-gray-400 mb-6">Secure authentication with role-based access control ensures proper data segregation between Administrators, Staff, and Clients.</p>
+                
+                <div class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <img src="assets/images/pawsitivecare/Login-PawsitiveCare.jpg" 
+                                alt="Login Page" 
+                                class="rounded-lg border border-gray-200 shadow-sm cursor-pointer hover:shadow-lg transition-shadow w-full object-cover" 
+                                onclick="openImageModal(this.src, this.alt)">
+                        </div>
+
+                        <div>
+                            <img src="assets/images/pawsitivecare/ForgotPassword-PawsitiveCare.jpg" 
+                                alt="Forgot Password Page" 
+                                class="rounded-lg border border-gray-200 shadow-sm cursor-pointer hover:shadow-lg transition-shadow w-full object-cover" 
+                                onclick="openImageModal(this.src, this.alt)">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <img src="assets/images/pawsitivecare/Register-PawsitiveCare.jpg" 
+                            alt="Registration Page Part 1" 
+                            class="rounded-lg border border-gray-200 shadow-sm cursor-pointer hover:shadow-lg transition-shadow w-full" 
+                            onclick="openImageModal(this.src, this.alt)">
+                        <img src="assets/images/pawsitivecare/Register2-PawsitiveCare.jpg" 
+                            alt="Registration Page Part 2" 
+                            class="rounded-lg border border-gray-200 shadow-sm cursor-pointer hover:shadow-lg transition-shadow w-full" 
+                            onclick="openImageModal(this.src, this.alt)">
+                    </div>
+
+                    <div class="mt-8 pt-6 border-t border-gray-200 dark:border-gray-200">
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-3">
+                            <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
+                                <i class="fas fa-fingerprint text-orange-500 mt-1"></i>
+                                <span><strong>User Experience:</strong> The login interface features a 'Remember Me' option and a password visibility toggle for enhanced usability.</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
+                                <i class="fas fa-key text-orange-500 mt-1"></i>
+                                <span><strong>Secure Recovery:</strong> The system sends password reset links exclusively to registered email addresses, confirmed by real-time success UI alerts.</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
+                                <i class="fas fa-id-badge text-orange-500 mt-1"></i>
+                                <span><strong>Automated Identification:</strong> Generates species-specific IDs during registration (e.g., <strong>2026-D001</strong> for dogs and <strong>2026-C001</strong> for cats).</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
+                                <i class="fas fa-envelope-open-text text-orange-500 mt-1"></i>
+                                <span><strong>Welcome Notifications:</strong> Triggers an automated welcome email to newly registered pet owners upon successful enrollment in the system.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Administrator Portal -->
+            <section>
+                <h2 class="text-2xl font-bold mb-6 text-gray-900 dark:text-white flex items-center gap-2">
+                    <i class="fas fa-user-shield text-red-500"></i>
+                    Administrator Portal
+                </h2>
+                <div class="space-y-6">
+                    <div>
+                        <img src="assets/images/pawsitivecare/Admin-PawsitiveCare.jpg" 
+                            alt="Admin Dashboard" 
+                            class="w-full rounded-lg border border-gray-200 dark:border-gray-200 shadow-sm cursor-pointer hover:shadow-lg transition-shadow" 
+                            onclick="openImageModal(this.src, this.alt)">
+                    </div>
+
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mt-6">User Management</h3>
+                    <img src="assets/images/pawsitivecare/Admin-Users-PawsitiveCare.jpg" 
+                        alt="Users List" 
+                        class="rounded-lg border border-gray-200 dark:border-gray-200 shadow-sm cursor-pointer hover:shadow-lg transition-shadow w-full" 
+                        onclick="openImageModal(this.src, this.alt)">
+
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mt-6">Appointment Management</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <img src="assets/images/pawsitivecare/Admin-Appointments-PawsitiveCare.jpg" alt="Calendar" class="rounded-lg border border-gray-200 shadow-sm cursor-pointer hover:shadow-lg" onclick="openImageModal(this.src, this.alt)">
+                        <img src="assets/images/pawsitivecare/Add-Appointments-PawsitiveCare.jpg" alt="Step 1" class="rounded-lg border border-gray-200 shadow-sm cursor-pointer hover:shadow-lg" onclick="openImageModal(this.src, this.alt)">
+                        <img src="assets/images/pawsitivecare/Add-Appointments2-PawsitiveCare.jpg" alt="Step 2" class="rounded-lg border border-gray-200 shadow-sm cursor-pointer hover:shadow-lg" onclick="openImageModal(this.src, this.alt)">
+                    </div>
+
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mt-6">Clients & Pets Database</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <img src="assets/images/pawsitivecare/Admin-ClientsPets-PawsitiveCare.jpg" alt="Database" class="rounded-lg border border-gray-200 shadow-sm cursor-pointer hover:shadow-lg" onclick="openImageModal(this.src, this.alt)">
+                        <img src="assets/images/pawsitivecare/Admin-ClientCard-PawsitiveCare.jpg" alt="Profile" class="rounded-lg border border-gray-200 shadow-sm cursor-pointer hover:shadow-lg" onclick="openImageModal(this.src, this.alt)">
+                        <img src="assets/images/pawsitivecare/Admin-ClientUpdate-PawsitiveCare.jpg" alt="Update" class="rounded-lg border border-gray-200 shadow-sm cursor-pointer hover:shadow-lg" onclick="openImageModal(this.src, this.alt)">
+                    </div>
+
+                    <div class="mt-8 pt-6 border-t border-gray-200 dark:border-gray-200">
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-3">
+                            <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
+                                <i class="fas fa-chart-line text-orange-500 mt-1"></i>
+                                <span><strong>Analytics Dashboard:</strong> Localized Manila-time greetings with Chart.js integration for real-time appointment trend visualization.</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
+                                <i class="fas fa-users-cog text-orange-500 mt-1"></i>
+                                <span><strong>User Control:</strong> Full authority to view, deactivate, or delete user accounts with advanced filtering for efficient sorting.</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
+                                <i class="fas fa-calendar-plus text-orange-500 mt-1"></i>
+                                <span><strong>Smart Scheduling:</strong> Two-step appointment flow that auto-syncs owner data via Custom Pet ID for streamlined booking.</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
+                                <i class="fas fa-database text-orange-500 mt-1"></i>
+                                <span><strong>Centralized Records:</strong> Comprehensive pet database with automated archiving of completed visits into medical histories.</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
+                                <i class="fas fa-comments text-orange-500 mt-1"></i>
+                                <span><strong>Message Center:</strong> Integrated inbox to manage site inquiries with synchronized email alerts for new submissions.</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
+                                <i class="fas fa-user-edit text-orange-500 mt-1"></i>
+                                <span><strong>Profile Personalization:</strong> Self-service settings for administrators to update profile photos and account credentials.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Staff Portal -->
+            <section>
+                <h2 class="text-2xl font-bold mb-6 text-gray-900 dark:text-white flex items-center gap-2">
+                    <i class="fas fa-user-nurse text-blue-500"></i>
+                    Staff Portal
+                </h2>
+                <div class="space-y-6">
+                    <div>
+                        <img src="assets/images/pawsitivecare/Staff-PawsitiveCare.jpg" 
+                            alt="Staff Dashboard" 
+                            class="w-full rounded-lg border border-gray-200 dark:border-gray-200 shadow-sm cursor-pointer hover:shadow-lg transition-shadow" 
+                            onclick="openImageModal(this.src, this.alt)">
+                        
+                        <div class="mt-8 pt-6 border-t border-gray-200 dark:border-gray-200">
+                            <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-3">
+                                <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
+                                    <i class="fas fa-calendar-check text-orange-500 mt-1"></i>
+                                    <span><strong>Appointment Management:</strong> Full access to schedule and manage the appointment lifecycle via the calendar.</span>
+                                </li>
+                                <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
+                                    <i class="fas fa-address-book text-orange-500 mt-1"></i>
+                                    <span><strong>Pet Database:</strong> Authority to register new clients and pets and maintain accurate patient records.</span>
+                                </li>
+                                <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
+                                    <i class="fas fa-inbox text-orange-500 mt-1"></i>
+                                    <span><strong>Inquiry Center:</strong> Access to the dashboard message center to view and process client inquiries.</span>
+                                </li>
+                                <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
+                                    <i class="fas fa-envelope-open-text text-orange-500 mt-1"></i>
+                                    <span><strong>Email Integration:</strong> Automated system triggers for appointment confirmations and status notifications.</span>
+                                </li>
+                                <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
+                                    <i class="fas fa-user-shield text-orange-500 mt-1"></i>
+                                    <span><strong>Operational Access:</strong> Strategic role-based access that excludes system settings and user management.</span>
+                                </li>
+                                <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
+                                    <i class="fas fa-file-signature text-orange-500 mt-1"></i>
+                                    <span><strong>Data Integrity:</strong> Permissions limited to adding and editing; record deletion is restricted to Admin only.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Client Portal -->
+            <section>
+                <h2 class="text-2xl font-bold mb-6 text-gray-900 dark:text-white flex items-center gap-2">
+                    <i class="fas fa-user text-green-500"></i>
+                    Client Portal
+                </h2>
+                <div class="space-y-6">
+                    <div>
+                        <img src="assets/images/pawsitivecare/Client-PawsitiveCare.jpg" 
+                             alt="Client Dashboard" 
+                             class="w-full rounded-lg border border-gray-200 dark:border-gray-200 shadow-sm cursor-pointer hover:shadow-lg transition-shadow" 
+                             onclick="openImageModal(this.src, this.alt)">
+                    </div>
+                    
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mt-6">Pet Management</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <img src="assets/images/pawsitivecare/Client-AddPet-PawsitiveCare.jpg" 
+                                 alt="Client Dashboard" 
+                                 class="rounded-lg border border-gray-200 dark:border-gray-200 shadow-sm cursor-pointer hover:shadow-lg transition-shadow" 
+                                 onclick="openImageModal(this.src, this.alt)">
+                        </div>
+                        <div>
+                            <img src="assets/images/pawsitivecare/Client-PDF-PawsitiveCare.jpg" 
+                                 alt="Client Dashboard" 
+                                 class="rounded-lg border border-gray-200 dark:border-gray-200 shadow-sm cursor-pointer hover:shadow-lg transition-shadow" 
+                                 onclick="openImageModal(this.src, this.alt)">
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mt-6">Appointment Management</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                           <img src="assets/images/pawsitivecare/Client-Notif-PawsitiveCare.jpg" 
+                                 alt="Appointment Notification" 
+                                 class="rounded-lg border border-gray-200 dark:border-gray-200 shadow-sm cursor-pointer hover:shadow-lg transition-shadow" 
+                                 onclick="openImageModal(this.src, this.alt)">
+                        </div>
+                        <div>
+                            <img src="assets/images/pawsitivecare/Client-VisitHistory-PawsitiveCare.jpg" 
+                                 alt="View Appointment" 
+                                 class="rounded-lg border border-gray-200 dark:border-gray-200 shadow-sm cursor-pointer hover:shadow-lg transition-shadow" 
+                                 onclick="openImageModal(this.src, this.alt)">
+                        </div>
+                    </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-200 dark:border-gray-200">
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-3">
+                            <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
+                                <i class="fas fa-mobile-alt text-orange-500 mt-1"></i>
+                                <span><strong>Mobile-Optimized:</strong> Fully responsive interface for seamless use on any device.</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
+                                <i class="fas fa-paw text-orange-500 mt-1"></i>
+                                <span><strong>Pet Profile Sidebar:</strong> Quick-switch navigation to view individual details for multiple pets.</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
+                                <i class="fas fa-bell text-orange-500 mt-1"></i>
+                                <span><strong>Real-Time Alerts:</strong> Notification system for upcoming appointments and clinic updates.</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
+                                <i class="fas fa-file-pdf text-orange-500 mt-1"></i>
+                                <span><strong>PDF Exports:</strong> One-click downloads for medical records and appointment histories.</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
+                                <i class="fas fa-heartbeat text-orange-500 mt-1"></i>
+                                <span><strong>Health Monitoring:</strong> Dynamic "Medical Status" cards to track ongoing pet wellness.</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
+                                <i class="fas fa-birthday-cake text-orange-500 mt-1"></i>
+                                <span><strong>Engagement:</strong> Interactive birthday countdowns for a personalized user experience.</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
+                                <i class="fas fa-shield-alt text-orange-500 mt-1"></i>
+                                <span><strong>Secure Controls:</strong> Independent pet registration with restricted deletion to ensure data integrity.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Email System -->
+            <section>
+                <h2 class="text-2xl font-bold mb-6 text-gray-900 dark:text-white flex items-center gap-2">
+                    <i class="fas fa-envelope text-yellow-500"></i>
+                    Email Notification System
+                </h2>
+                <div class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <img src="assets/images/pawsitivecare/Email-Welcome-PawsitiveCare.jpg"
+                            alt="Welcome Email" 
+                            class="rounded-lg border border-gray-200 dark:border-gray-200 shadow-sm cursor-pointer hover:shadow-lg transition-shadow" 
+                            onclick="openImageModal(this.src, this.alt)">
+                        
+                        <img src="assets/images/pawsitivecare/Email-Scheduled-PawsitiveCare.jpg"
+                            alt="Appointment Schedule" 
+                            class="rounded-lg border border-gray-200 dark:border-gray-200 shadow-sm cursor-pointer hover:shadow-lg transition-shadow" 
+                            onclick="openImageModal(this.src, this.alt)">
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <img src="assets/images/pawsitivecare/Email-Completed-PawsitiveCare.jpg"
+                            alt="Appointment Completed" 
+                            class="rounded-lg border border-gray-200 dark:border-gray-200 shadow-sm cursor-pointer hover:shadow-lg transition-shadow" 
+                            onclick="openImageModal(this.src, this.alt)">
+
+                        <img src="assets/images/pawsitivecare/Email-PawsitiveCare.jpg"
+                            alt="Contact Email" 
+                            class="rounded-lg border border-gray-200 dark:border-gray-200 shadow-sm cursor-pointer hover:shadow-lg transition-shadow" 
+                            onclick="openImageModal(this.src, this.alt)">
+                    </div>
+
+                    <div class="mt-8 pt-6 border-t border-gray-200 dark:border-gray-200">
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-3">
+                            <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
+                                <i class="fas fa-user-plus text-orange-500 mt-1"></i>
+                                <span><strong>Onboarding:</strong> Newly registered pet owners receive an automated email notification confirming their successful enrollment in the system.</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
+                                <i class="fas fa-calendar-alt text-orange-500 mt-1"></i>
+                                <span><strong>Scheduling:</strong> Pet owners are notified of scheduled appointments via email and through real-time updates on their client dashboard.</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
+                                <i class="fas fa-check-double text-orange-500 mt-1"></i>
+                                <span><strong>Finalization:</strong> Upon appointment completion, owners receive an email confirmation and the record is automatically added to their history for PDF download.</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
+                                <i class="fas fa-reply-all text-orange-500 mt-1"></i>
+                                <span><strong>Staff Alerts:</strong> Administrators and staff receive inquiries through official admin email and the dashboard message center to ensure effective communication.</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
+                                <i class="fas fa-server text-orange-500 mt-1"></i>
+                                <span><strong>Reliable Delivery:</strong> The system utilizes Gmail SMTP to maintain high deliverability for all branded, professional communications.</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
+                                <i class="fas fa-sync text-orange-500 mt-1"></i>
+                                <span><strong>Automated Lifecycle:</strong> Keeps all stakeholders informed throughout the entire appointment process without manual intervention.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+    <!-- Core Features -->
+                <section>
+                    <h2 class="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Core Features Breakdown</h2>
+                    <div class="grid grid-cols-1 gap-6">
+                        <div class="p-5 bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-200 hover-lift">
+                            <h4 class="font-bold mb-2 flex items-center gap-2 text-gray-900 dark:text-white">
+                                <i class="fas fa-paw text-orange-500"></i> Pet & Owner Management
+                            </h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Clients can register multiple pets with individual profiles including photo uploads, breed information, weight tracking, and birthdate records.</p>
+                        </div>
+                        
+                        <div class="p-5 bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-200 hover-lift">
+                        <h4 class="font-bold mb-2 flex items-center gap-2 text-gray-900 dark:text-white">
+                            <i class="fas fa-calendar-check text-blue-500"></i> Appointment Lifecycle
+                        </h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Complete scheduling workflow with six status types:</p>
+                        
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 text-xs font-bold rounded-full border 
+                                bg-amber-50 text-amber-700 border-amber-200 
+                                dark:bg-amber-900/20 dark:text-amber-400 dark:border-amber-800/50">
+                                Scheduled
+                            </span>
+
+                            <span class="px-3 py-1 text-xs font-bold rounded-full border 
+                                bg-emerald-50 text-emerald-700 border-emerald-200 
+                                dark:bg-emerald-900/20 dark:text-emerald-400 dark:border-emerald-800/50">
+                                Confirmed
+                            </span>
+
+                            <span class="px-3 py-1 text-xs font-bold rounded-full border 
+                                bg-rose-50 text-rose-700 border-rose-200 
+                                dark:bg-rose-900/20 dark:text-rose-400 dark:border-rose-800/50">
+                                No-Show
+                            </span>
+
+                            <span class="px-3 py-1 text-xs font-bold rounded-full border 
+                                bg-gray-100 text-gray-800 border-gray-300 
+                                dark:bg-gray-700/50 dark:text-gray-200 dark:border-gray-500">
+                                Cancelled
+                            </span>
+
+                            <span class="px-3 py-1 text-xs font-bold rounded-full border 
+                                bg-blue-50 text-blue-700 border-blue-200 
+                                dark:bg-blue-900/20 dark:text-blue-400 dark:border-blue-800/50">
+                                Completed
+                            </span>
+
+                            <span class="px-3 py-1 text-xs font-bold rounded-full border 
+                                bg-purple-50 text-purple-700 border-purple-200 
+                                dark:bg-purple-900/20 dark:text-purple-400 dark:border-purple-800/50">
+                                Rescheduled
+                            </span>
+                        </div>
+                    </div>
+
+                        <div class="p-5 bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-200 hover-lift">
+                            <h4 class="font-bold mb-2 flex items-center gap-2 text-gray-900 dark:text-white">
+                                <i class="fas fa-stethoscope text-red-500"></i> Medical Records Management
+                            </h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Staff can manage medical treatments and surgeries including pre- and post-treatment notes, prescription tracking, and follow-up schedules.</p>
+                        </div>
+                        
+                        <div class="p-5 bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-200 hover-lift">
+                            <h4 class="font-bold mb-2 flex items-center gap-2 text-gray-900 dark:text-white">
+                                <i class="fas fa-file-pdf text-red-600"></i> Automated PDF Generation
+                            </h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">System automatically generates downloadable PDF pet details and medical histories.</p>
+                        </div>
+
+                        <div class="p-5 bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-200 hover-lift">
+                            <h4 class="font-bold mb-2 flex items-center gap-2 text-gray-900 dark:text-white">
+                                <i class="fas fa-bell text-yellow-500"></i> Dual Notification System
+                            </h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Real-time dashboard bell alerts for internal updates combined with branded email notifications for external client communication.</p>
+                        </div>
+                    </div>
+                </section>
+
+            <!-- Database Architecture -->    
+            <section>
+                <h2 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Database Architecture</h2>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-sm text-gray-600 dark:text-gray-400 border-collapse">
+                        <thead>
+                            <tr class="border-b-2 border-gray-200 dark:border-gray-200 font-bold text-gray-900 dark:text-white text-xs uppercase">
+                                <th class="py-3 px-4">Table</th>
+                                <th class="py-3 px-4">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200 dark:divide-gray-200">
+                            <tr class="hover:bg-gray-50 dark:hover:bg-gray-800/50">
+                                <td class="py-3 px-4 font-mono text-xs font-semibold">users</td>
+                                <td class="py-3 px-4">Stores credentials, profile paths, and roles (Admin, Staff, Client)</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 dark:hover:bg-gray-800/50">
+                                <td class="py-3 px-4 font-mono text-xs font-semibold">pets</td>
+                                <td class="py-3 px-4">Stores pet profiles, photos, and links to owners via owner_id</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 dark:hover:bg-gray-800/50">
+                                <td class="py-3 px-4 font-mono text-xs font-semibold">appointments</td>
+                                <td class="py-3 px-4">Tracks scheduling data, services requested, and status updates</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 dark:hover:bg-gray-800/50">
+                                <td class="py-3 px-4 font-mono text-xs font-semibold">messages</td>
+                                <td class="py-3 px-4">Stores public inquiries from the contact form</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 dark:hover:bg-gray-800/50">
+                                <td class="py-3 px-4 font-mono text-xs font-semibold">notifications</td>
+                                <td class="py-3 px-4">Logs real-time dashboard alerts for users</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+                <!-- Limitations & Future Development -->
+                <section>
+                    <h2 class="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Current Limitations & Future Development</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="p-5 bg-orange-50 dark:bg-orange-900/20 rounded-lg border border-gray-200 dark:border-gray-200">
+                            <h4 class="font-bold mb-3 text-gray-900 dark:text-white flex items-center gap-2">
+                                <i class="fas fa-exclamation-circle text-orange-500"></i> Current Limitations
+                            </h4>
+                            <ul class="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-dot-circle text-xs text-orange-500 mt-1"></i>
+                                    <span>Specialized for cats and dogs only</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-dot-circle text-xs text-orange-500 mt-1"></i>
+                                    <span>No inventory tracking for medicines or supplies</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-dot-circle text-xs text-orange-500 mt-1"></i>
+                                    <span>Internal-only appointment booking (clients cannot book online yet)</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="p-5 bg-green-50 dark:bg-green-900/20 rounded-lg border border-gray-200 dark:border-gray-200">
+                            <h4 class="font-bold mb-3 text-gray-900 dark:text-white flex items-center gap-2">
+                                <i class="fas fa-lightbulb text-green-500"></i> Planned Features
+                            </h4>
+                            <ul class="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check-circle text-xs text-green-500 mt-1"></i>
+                                    <span>Client-facing online appointment booking</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check-circle text-xs text-green-500 mt-1"></i>
+                                    <span>Pet lodging management system</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check-circle text-xs text-green-500 mt-1"></i>
+                                    <span>Automated payment processing integration</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Conclusion -->
+                <section class="border-t border-gray-200 dark:border-gray-200 pt-8">
+                    <h2 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Project Impact</h2>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                        PawsitiveCare successfully digitizes traditional veterinary workflows by replacing manual paperwork with a secure, role-based ecosystem. The platform optimizes clinic productivity through automated appointment scheduling, synchronized client communications, and real-time medical record tracking. 
+                        By implementing strict data integrity protocols across administrator, staff, and client portals, the system ensures high standards of privacy while delivering a modern, mobile-responsive user experience.
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Image Modal Script -->
+    <script>
+    function openImageModal(src, alt) {
+        const modal = document.createElement('div');
+        modal.className = 'fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4 cursor-pointer';
+        modal.onclick = () => modal.remove();
+        
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = alt;
+        img.className = 'max-w-full max-h-full rounded-lg shadow-2xl';
+        
+        modal.appendChild(img);
+        document.body.appendChild(modal);
+    }
+    </script>
+        </div>
+
+    <footer class="bg-white mt-6 transition-colors duration-300 relative">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-[1px] 
+                bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
+    
+    <div class="max-w-4xl mx-auto px-6 py-5">
+        <div class="flex flex-col items-center justify-center gap-1 text-center">
+            <p class="text-sm text-gray-900 dark:text-white font-normal">
+                &copy; 2026 Jomarie Salvio Tijada. All Rights Reserved.
+            </p>
+            <p class="text-sm text-gray-900 dark:text-white font-normal">
+                Developed in San Juan, Ilocos Sur, Philippines
+            </p>
+        </div>
+    </div>
+</footer>
+    <div id="certModal" class="fixed inset-0 z-[150] hidden items-center justify-center bg-black/80 backdrop-blur-sm p-4" onclick="closeCertModal()">
+        <div class="relative max-w-4xl w-full" onclick="event.stopPropagation()">
+            <button class="absolute -top-12 right-0 text-white text-xl font-bold hover:text-gray-300" onclick="closeCertModal()">&times;</button>
+            <img id="modalImage" src="#" alt="Certification" class="w-full h-auto rounded-xl shadow-2xl border border-white/10">
+        </div>
+    </div>
+
+    <!-- Gallery Lightbox Modal -->
+    <div id="galleryModal" class="fixed inset-0 z-[150] hidden items-center justify-center bg-black/90 backdrop-blur-sm" onclick="closeGalleryModal()">
+        <div class="relative max-w-6xl w-full h-full flex items-center justify-center p-4">
+            <button class="absolute top-4 right-4 text-white hover:text-gray-300 transition text-lg flex items-center gap-2" onclick="closeGalleryModal()">
+                <span class="text-2xl font-bold">&times;</span>
+            </button>
+            
+            <!-- Previous Button -->
+            <button onclick="previousGalleryImage(); event.stopPropagation();" class="absolute left-4 w-10 h-10 sm:w-12 sm:h-12 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-full shadow-lg flex items-center justify-center hover:bg-white dark:hover:bg-gray-700 transition-colors border border-gray-200 dark:border-gray-600">
+                <i class="fas fa-angle-left text-gray-700 dark:text-gray-200 text-xl"></i>
+            </button>
+            
+            <!-- Image -->
+            <div class="max-w-5xl max-h-[90vh] flex items-center justify-center" onclick="event.stopPropagation()">
+                <img id="galleryModalImage" src="#" alt="Gallery" class="max-w-full max-h-[90vh] w-auto h-auto rounded-lg shadow-2xl">
+            </div>
+            
+            <!-- Next Button -->
+            <button onclick="nextGalleryImage(); event.stopPropagation();" class="absolute right-4 w-10 h-10 sm:w-12 sm:h-12 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-full shadow-lg flex items-center justify-center hover:bg-white dark:hover:bg-gray-700 transition-colors border border-gray-200 dark:border-gray-600">
+                <i class="fas fa-angle-right text-gray-700 dark:text-gray-200 text-xl"></i>
+            </button>
+            
+            <!-- Image Counter -->
+            <div class="absolute bottom-4 left-1/2 -translate-x-1/2 text-white text-sm bg-black/50 px-4 py-2 rounded-full" onclick="event.stopPropagation()">
+                <span id="galleryCounter">1 / 1</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/theme.js?v=2" defer></script>
+            <script src="assets/js/chatbotKnowledge.js?v=3" defer></script>
+<script src="assets/js/chat-widget.js?v=10" defer></script>
+<script src="assets/js/script.js?v=3" defer></script>
+<script>
+        window.openCertModal = function(imgSrc) {
+            const modal = document.getElementById('certModal');
+            const modalImg = document.getElementById('modalImage'); 
+            if (modal && modalImg) {
+                modalImg.src = imgSrc;
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        window.closeCertModal = function() {
+            const modal = document.getElementById('certModal'); 
+            if (modal) {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeCertModal();
+                closeGalleryModal();
+                if (typeof closeEditPostModal === 'function') closeEditPostModal();
+                if (typeof closeDeleteConfirmModal === 'function') closeDeleteConfirmModal();
+                if (typeof closeCreatePostModal === 'function') closeCreatePostModal();
+            }
+            
+            // Gallery navigation with arrow keys
+            const galleryModal = document.getElementById('galleryModal');
+            if (galleryModal && !galleryModal.classList.contains('hidden')) {
+                if (e.key === 'ArrowLeft') {
+                    previousGalleryImage();
+                } else if (e.key === 'ArrowRight') {
+                    nextGalleryImage();
+                }
+            }
+        });
+
+        // Gallery Modal Functions
+        let currentGalleryIndex = 0;
+        let galleryImages = [];
+
+        window.openGalleryModal = function(imgSrc, images) {
+            galleryImages = images;
+            currentGalleryIndex = images.indexOf(imgSrc);
+            const modal = document.getElementById('galleryModal');
+            const modalImg = document.getElementById('galleryModalImage');
+            const counter = document.getElementById('galleryCounter');
+            
+            if (modal && modalImg) {
+                modalImg.src = imgSrc;
+                counter.textContent = `${currentGalleryIndex + 1} / ${galleryImages.length}`;
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        window.closeGalleryModal = function() {
+            const modal = document.getElementById('galleryModal');
+            if (modal) {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        window.nextGalleryImage = function() {
+            if (galleryImages.length === 0) return;
+            currentGalleryIndex = (currentGalleryIndex + 1) % galleryImages.length;
+            const modalImg = document.getElementById('galleryModalImage');
+            const counter = document.getElementById('galleryCounter');
+            if (modalImg) {
+                modalImg.src = galleryImages[currentGalleryIndex];
+                counter.textContent = `${currentGalleryIndex + 1} / ${galleryImages.length}`;
+            }
+        }
+
+        window.previousGalleryImage = function() {
+            if (galleryImages.length === 0) return;
+            currentGalleryIndex = (currentGalleryIndex - 1 + galleryImages.length) % galleryImages.length;
+            const modalImg = document.getElementById('galleryModalImage');
+            const counter = document.getElementById('galleryCounter');
+            if (modalImg) {
+                modalImg.src = galleryImages[currentGalleryIndex];
+                counter.textContent = `${currentGalleryIndex + 1} / ${galleryImages.length}`;
+            }
+        }
+    </script>
+
+    <button id="scrollToTop" 
+        title="Back to Top"
+        class="fixed bottom-28 right-6 z-[40] hidden w-12 h-12 items-center justify-center shrink-0 rounded-full transition-all duration-300 shadow-lg
+            bg-black text-white hover:bg-zinc-800 hover:scale-110">
+        <i class="fas fa-chevron-up text-lg"></i>
+    </button>
+    
+    </body>
+
+
+</html>
