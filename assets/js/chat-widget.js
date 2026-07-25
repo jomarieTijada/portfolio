@@ -23,7 +23,7 @@
             aiData: ['basic AI/ML', 'data analytics']
         },
         experience: ['I build practical academic and portfolio projects while continuing to improve my software development skills.'],
-        resume: 'You can download my resume here: <a href="https://drive.google.com/uc?export=download&id=1yYtOe_4uG_el-X6jZbMgWulfy1LGEGqv" download target="_blank" rel="noopener noreferrer" class="font-semibold underline">Download here</a>.',
+        resume: 'You can download my resume here: <a href="https://drive.google.com/file/d/1yYtOe_4uG_el-X6jZbMgWulfy1LGEGqv/view?usp=sharing" download target="_blank" rel="noopener noreferrer" class="font-semibold underline">Download here</a>.',
         contact: 'You can email me at <a href="mailto:jomsalvio@gmail.com" class="font-semibold underline">jomsalvio@gmail.com</a>. You can also use the contact section on this portfolio for the most accurate way to reach me.'
     };
 

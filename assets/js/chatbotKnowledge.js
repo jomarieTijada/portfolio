@@ -59,6 +59,6 @@ window.JomarieChatbotKnowledge = {
         'I have built academic and personal projects using Java, SQL, Flutter, Firebase, PHP, Laravel, and web technologies.',
         'I am continuously improving through hands-on systems, portfolio projects, and practical software development work.'
     ],
-    resume: 'You can download my resume here: <a href="https://drive.google.com/uc?export=download&id=1yYtOe_4uG_el-X6jZbMgWulfy1LGEGqv" download target="_blank" rel="noopener noreferrer" class="font-semibold underline">Download here</a>.',
-    contact: 'You can email me at <a href="mailto:jomsalvio@gmail.com" class="font-semibold underline">jomsalvio@gmail.com</a>. You can also use the contact section on this portfolio for the most accurate way to reach me.'
+    resume: 'You can download my resume here: <a href="https://drive.google.com/file/d/1yYtOe_4uG_el-X6jZbMgWulfy1LGEGqv/view?usp=sharing" download target="_blank" rel="noopener noreferrer" class="font-semibold underline">Download here</a>.',
+    contact: 'You can email me at <a href="mailto:jomsalvio@gmail.com" class="font-semibold underline">jomsalvio@gmail.com</a> or connect with me on <a href="https://www.linkedin.com/in/jomarie-tijada-16034a330" target="_blank" rel="noopener noreferrer" class="font-semibold underline">LinkedIn</a>. You can also use the contact section on this portfolio for the most accurate way to reach me.'
 };
