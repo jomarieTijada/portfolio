@@ -55,6 +55,7 @@ window.JomarieChatbotKnowledge = {
         aiData: ['basic AI/ML', 'data analytics']
     },
     experience: [
+        'I completed 200+ hours as a Developer Intern / Software Engineering Intern (OJT) at CSA Business Consultancy from May to June 2026, creating software-based business solutions to support internal workflows and practical client needs.',
         'I have built academic and personal projects using Java, SQL, Flutter, Firebase, PHP, Laravel, and web technologies.',
         'I am continuously improving through hands-on systems, portfolio projects, and practical software development work.'
     ],
