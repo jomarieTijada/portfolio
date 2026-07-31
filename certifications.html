@@ -56,9 +56,9 @@
     </script>
     
         
-    <title>Certifications | Jomarie Salvio Tijada &middot; Data Analysis &middot; Python &middot; AI</title>
-    <meta name="title" content="Certifications | Jomarie Salvio Tijada &middot; Data Analysis &middot; Python &middot; AI">
-    <meta name="description" content="View the certifications of Jomarie Salvio Tijada &mdash; Student Freelancer and Aspiring Software Engineer based in San Juan, Ilocos Sur. Certified in Data Analysis, Python, SQL, AI, Prompt Engineering, and IT Resilience.">
+    <title>Google Data Analytics Certifications | Jomarie Salvio Tijada</title>
+    <meta name="title" content="Google Data Analytics Certifications | Jomarie Salvio Tijada">
+    <meta name="description" content="View Jomarie Salvio Tijada's Google Data Analytics and Google Advanced Data Analytics Professional Certificates and related Coursera course credentials.">
     <meta name="keywords" content="Jomarie Salvio Tijada, Jomarie Tijada, Jomarie Salvio Tijada San Juan Ilocos Sur, Software Engineer Philippines, CS Student Ilocos Sur, Jomarie Tijada Portfolio, Jomarie Salvio Tijada Portfolio, Flutter Developer Philippines, Java Developer, Python Developer">
     <meta name="author" content="Jomarie Salvio Tijada">
 
@@ -89,6 +89,12 @@
     <meta name="ICBM" content="14.6061, 121.0315">
         
     
+    <script>
+        try {
+            const savedTheme = localStorage.getItem('theme') || localStorage.getItem('community_theme');
+            document.documentElement.classList.toggle('dark', savedTheme === 'dark');
+        } catch {}
+    </script>
     <script src="https://cdn.tailwindcss.com/"></script>
     <script>
         tailwind.config = {
@@ -98,7 +104,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" 
           integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" 
           crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="assets/css/style.css?v=6">
+    <link rel="stylesheet" href="assets/css/style.css?v=13">
 </head>
 <body class="antialiased bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-white min-h-screen flex flex-col">
 
@@ -547,101 +553,186 @@ document.getElementById('register-form').addEventListener('submit', async functi
             <span class="font-medium">Back to Home</span>
         </a>
         <h1 class="text-4xl font-bold mt-8 text-gray-900 dark:text-white">Certifications</h1>
-        <p class="text-gray-600 dark:text-gray-400 mt-4">Professional credentials and training in Data Analysis, Python, SQL, AI, Prompt Engineering, and IT Resilience.</p>
+        <p class="text-gray-600 dark:text-gray-400 mt-4">Google Professional Certificates and course credentials in data analytics, Python, visualization, statistics, and machine learning.</p>
     </div>
 
     <div id="cert-container" class="grid grid-cols-1 md:grid-cols-2 gap-8">
         
-                <div class="cert-card bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm hover-lift cursor-pointer" 
-             onclick="openCertModal('assets/images/Associate%20Data%20Analyst.jpg')">
-            <img 
-                src="assets/images/Associate%20Data%20Analyst.jpg" 
-                alt="Associate Data Analyst Certificate by DataCamp - Jomarie Salvio Tijada" 
+        <button type="button" class="cert-card bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm hover-lift cursor-pointer text-left"
+            aria-label="View Google Advanced Data Analytics Professional Certificate"
+            onclick="openCertModal('assets/images/google-advanced-data-analytics.png', 'Google Advanced Data Analytics Professional Certificate awarded to Jomarie Tijada')">
+            <img src="assets/images/google-advanced-data-analytics.png"
+                alt="Google Advanced Data Analytics Professional Certificate awarded to Jomarie Tijada"
+                loading="lazy" decoding="async"
                 class="w-full h-56 object-cover rounded-lg mb-4 bg-gray-100">
-            <h2 class="text-lg font-bold text-gray-900 dark:text-white">Associate Data Analyst</h2>
-            <p class="text-sm text-gray-500 dark:text-gray-400">DataCamp • 2025</p>
-        </div>
-                <div class="cert-card bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm hover-lift cursor-pointer" 
-             onclick="openCertModal('assets/images/Intermediate%20SQL.jpg')">
-            <img 
-                src="assets/images/Intermediate%20SQL.jpg" 
-                alt="Intermediate SQL Certificate by DataCamp - Jomarie Salvio Tijada" 
+            <h2 class="text-lg font-bold text-gray-900 dark:text-white">Google Advanced Data Analytics</h2>
+            <p class="text-sm text-gray-500 dark:text-gray-400">Google &middot; Coursera &bull; June 7, 2026</p>
+        </button>
+
+        <button type="button" class="cert-card bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm hover-lift cursor-pointer text-left"
+            aria-label="View Google Data Analytics Professional Certificate"
+            onclick="openCertModal('assets/images/google-data-analytics.png', 'Google Data Analytics Professional Certificate awarded to Jomarie Tijada')">
+            <img src="assets/images/google-data-analytics.png"
+                alt="Google Data Analytics Professional Certificate awarded to Jomarie Tijada"
+                loading="lazy" decoding="async"
                 class="w-full h-56 object-cover rounded-lg mb-4 bg-gray-100">
-            <h2 class="text-lg font-bold text-gray-900 dark:text-white">Intermediate SQL</h2>
-            <p class="text-sm text-gray-500 dark:text-gray-400">DataCamp • 2025</p>
-        </div>
-                <div class="cert-card bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm hover-lift cursor-pointer" 
-             onclick="openCertModal('assets/images/Intermediate%20Python.jpg')">
-            <img 
-                src="assets/images/Intermediate%20Python.jpg" 
-                alt="Intermediate Python Certificate by DataCamp - Jomarie Salvio Tijada" 
+            <h2 class="text-lg font-bold text-gray-900 dark:text-white">Google Data Analytics</h2>
+            <p class="text-sm text-gray-500 dark:text-gray-400">Google &middot; Coursera &bull; June 16, 2026</p>
+        </button>
+
+        <button type="button" class="cert-card bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm hover-lift cursor-pointer text-left"
+            aria-label="View Google Advanced Data Analytics Capstone certificate"
+            onclick="openCertModal('assets/images/google-advanced-data-analytics-capstone.png', 'Google Advanced Data Analytics Capstone certificate awarded to Jomarie Tijada')">
+            <img src="assets/images/google-advanced-data-analytics-capstone.png"
+                alt="Google Advanced Data Analytics Capstone certificate awarded to Jomarie Tijada"
+                loading="lazy" decoding="async"
                 class="w-full h-56 object-cover rounded-lg mb-4 bg-gray-100">
-            <h2 class="text-lg font-bold text-gray-900 dark:text-white">Intermediate Python</h2>
-            <p class="text-sm text-gray-500 dark:text-gray-400">DataCamp • 2025</p>
-        </div>
-                <div class="cert-card bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm hover-lift cursor-pointer" 
-             onclick="openCertModal('assets/images/Understanding%20Prompt%20Engineering.jpg')">
-            <img 
-                src="assets/images/Understanding%20Prompt%20Engineering.jpg" 
-                alt="Understanding Prompt Engineering Certificate by DataCamp - Jomarie Salvio Tijada" 
+            <h2 class="text-lg font-bold text-gray-900 dark:text-white">Google Advanced Data Analytics Capstone</h2>
+            <p class="text-sm text-gray-500 dark:text-gray-400">Google &middot; Coursera &bull; June 7, 2026</p>
+        </button>
+
+        <button type="button" class="cert-card bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm hover-lift cursor-pointer text-left"
+            aria-label="View The Nuts and Bolts of Machine Learning certificate"
+            onclick="openCertModal('assets/images/nuts-and-bolts-machine-learning.png', 'The Nuts and Bolts of Machine Learning certificate awarded to Jomarie Tijada')">
+            <img src="assets/images/nuts-and-bolts-machine-learning.png"
+                alt="The Nuts and Bolts of Machine Learning certificate awarded to Jomarie Tijada"
+                loading="lazy" decoding="async"
                 class="w-full h-56 object-cover rounded-lg mb-4 bg-gray-100">
-            <h2 class="text-lg font-bold text-gray-900 dark:text-white">Understanding Prompt Engineering</h2>
-            <p class="text-sm text-gray-500 dark:text-gray-400">DataCamp • 2025</p>
-        </div>
-                <div class="cert-card bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm hover-lift cursor-pointer" 
-             onclick="openCertModal('assets/images/Intermediate%20ChatGPT.jpg')">
-            <img 
-                src="assets/images/Intermediate%20ChatGPT.jpg" 
-                alt="Intermediate GPT Certificate by DataCamp - Jomarie Salvio Tijada" 
+            <h2 class="text-lg font-bold text-gray-900 dark:text-white">The Nuts and Bolts of Machine Learning</h2>
+            <p class="text-sm text-gray-500 dark:text-gray-400">Google &middot; Coursera &bull; June 7, 2026</p>
+        </button>
+
+        <button type="button" class="cert-card bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm hover-lift cursor-pointer text-left"
+            aria-label="View Regression Analysis Simplify Complex Data Relationships certificate"
+            onclick="openCertModal('assets/images/regression-analysis-data-relationships.png', 'Regression Analysis Simplify Complex Data Relationships certificate awarded to Jomarie Tijada')">
+            <img src="assets/images/regression-analysis-data-relationships.png"
+                alt="Regression Analysis Simplify Complex Data Relationships certificate awarded to Jomarie Tijada"
+                loading="lazy" decoding="async"
                 class="w-full h-56 object-cover rounded-lg mb-4 bg-gray-100">
-            <h2 class="text-lg font-bold text-gray-900 dark:text-white">Intermediate GPT</h2>
-            <p class="text-sm text-gray-500 dark:text-gray-400">DataCamp • 2025</p>
-        </div>
-                <div class="cert-card bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm hover-lift cursor-pointer" 
-             onclick="openCertModal('assets/images/Understanding%20ChatGPT.jpg')">
-            <img 
-                src="assets/images/Understanding%20ChatGPT.jpg" 
-                alt="Understanding ChatGPT Certificate by DataCamp - Jomarie Salvio Tijada" 
+            <h2 class="text-lg font-bold text-gray-900 dark:text-white">Regression Analysis: Simplify Complex Data Relationships</h2>
+            <p class="text-sm text-gray-500 dark:text-gray-400">Google &middot; Coursera &bull; June 6, 2026</p>
+        </button>
+
+        <button type="button" class="cert-card bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm hover-lift cursor-pointer text-left"
+            aria-label="View The Power of Statistics certificate"
+            onclick="openCertModal('assets/images/power-of-statistics.png', 'The Power of Statistics certificate awarded to Jomarie Tijada')">
+            <img src="assets/images/power-of-statistics.png"
+                alt="The Power of Statistics certificate awarded to Jomarie Tijada"
+                loading="lazy" decoding="async"
                 class="w-full h-56 object-cover rounded-lg mb-4 bg-gray-100">
-            <h2 class="text-lg font-bold text-gray-900 dark:text-white">Understanding ChatGPT</h2>
-            <p class="text-sm text-gray-500 dark:text-gray-400">DataCamp • 2025</p>
-        </div>
-                <div class="cert-card bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm hover-lift cursor-pointer" 
-             onclick="openCertModal('assets/images/Intro%20to%20SQL.jpg')">
-            <img 
-                src="assets/images/Intro%20to%20SQL.jpg" 
-                alt="Introduction to SQL Certificate by DataCamp - Jomarie Salvio Tijada" 
+            <h2 class="text-lg font-bold text-gray-900 dark:text-white">The Power of Statistics</h2>
+            <p class="text-sm text-gray-500 dark:text-gray-400">Google &middot; Coursera &bull; June 4, 2026</p>
+        </button>
+
+        <button type="button" class="cert-card bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm hover-lift cursor-pointer text-left"
+            aria-label="View Go Beyond the Numbers Translate Data into Insights certificate"
+            onclick="openCertModal('assets/images/go-beyond-numbers-data-insights.png', 'Go Beyond the Numbers Translate Data into Insights certificate awarded to Jomarie Tijada')">
+            <img src="assets/images/go-beyond-numbers-data-insights.png"
+                alt="Go Beyond the Numbers Translate Data into Insights certificate awarded to Jomarie Tijada"
+                loading="lazy" decoding="async"
                 class="w-full h-56 object-cover rounded-lg mb-4 bg-gray-100">
-            <h2 class="text-lg font-bold text-gray-900 dark:text-white">Introduction to SQL</h2>
-            <p class="text-sm text-gray-500 dark:text-gray-400">DataCamp • 2025</p>
-        </div>
-                <div class="cert-card bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm hover-lift cursor-pointer" 
-             onclick="openCertModal('assets/images/Intro%20to%20Python.jpg')">
-            <img 
-                src="assets/images/Intro%20to%20Python.jpg" 
-                alt="Introduction to Python Certificate by DataCamp - Jomarie Salvio Tijada" 
+            <h2 class="text-lg font-bold text-gray-900 dark:text-white">Go Beyond the Numbers: Translate Data into Insights</h2>
+            <p class="text-sm text-gray-500 dark:text-gray-400">Google &middot; Coursera &bull; June 3, 2026</p>
+        </button>
+
+        <button type="button" class="cert-card bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm hover-lift cursor-pointer text-left"
+            aria-label="View Foundations of Data Science certificate"
+            onclick="openCertModal('assets/images/foundations-of-data-science.png', 'Foundations of Data Science certificate awarded to Jomarie Tijada')">
+            <img src="assets/images/foundations-of-data-science.png"
+                alt="Foundations of Data Science certificate awarded to Jomarie Tijada"
+                loading="lazy" decoding="async"
                 class="w-full h-56 object-cover rounded-lg mb-4 bg-gray-100">
-            <h2 class="text-lg font-bold text-gray-900 dark:text-white">Introduction to Python</h2>
-            <p class="text-sm text-gray-500 dark:text-gray-400">DataCamp • 2025</p>
-        </div>
-                <div class="cert-card bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm hover-lift cursor-pointer" 
-             onclick="openCertModal('assets/images/ChatGPT%20Fundamentals.jpg')">
-            <img 
-                src="assets/images/ChatGPT%20Fundamentals.jpg" 
-                alt="ChatGPT Fundamentals Certificate by DataCamp - Jomarie Salvio Tijada" 
+            <h2 class="text-lg font-bold text-gray-900 dark:text-white">Foundations of Data Science</h2>
+            <p class="text-sm text-gray-500 dark:text-gray-400">Google &middot; Coursera &bull; June 1, 2026</p>
+        </button>
+
+        <button type="button" class="cert-card bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm hover-lift cursor-pointer text-left"
+            aria-label="View Google Data Analytics Capstone certificate"
+            onclick="openCertModal('assets/images/google-data-analytics-capstone.png', 'Google Data Analytics Capstone Complete a Case Study certificate awarded to Jomarie Tijada')">
+            <img src="assets/images/google-data-analytics-capstone.png"
+                alt="Google Data Analytics Capstone Complete a Case Study certificate awarded to Jomarie Tijada"
+                loading="lazy" decoding="async"
                 class="w-full h-56 object-cover rounded-lg mb-4 bg-gray-100">
-            <h2 class="text-lg font-bold text-gray-900 dark:text-white">ChatGPT Fundamentals</h2>
-            <p class="text-sm text-gray-500 dark:text-gray-400">DataCamp • 2025</p>
-        </div>
-                <div class="cert-card bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm hover-lift cursor-pointer" 
-             onclick="openCertModal('assets/images/IT%20Resilience.jpg')">
-            <img 
-                src="assets/images/IT%20Resilience.jpg" 
-                alt="IT Resilience Certification Certificate by WVSU - Jomarie Salvio Tijada" 
+            <h2 class="text-lg font-bold text-gray-900 dark:text-white">Google Data Analytics Capstone: Complete a Case Study</h2>
+            <p class="text-sm text-gray-500 dark:text-gray-400">Google &middot; Coursera &bull; June 16, 2026</p>
+        </button>
+
+        <button type="button" class="cert-card bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm hover-lift cursor-pointer text-left"
+            aria-label="View Introduction to Data Analysis Using Python certificate"
+            onclick="openCertModal('assets/images/introduction-data-analysis-python.png', 'Introduction to Data Analysis Using Python certificate awarded to Jomarie Tijada')">
+            <img src="assets/images/introduction-data-analysis-python.png"
+                alt="Introduction to Data Analysis Using Python certificate awarded to Jomarie Tijada"
+                loading="lazy" decoding="async"
                 class="w-full h-56 object-cover rounded-lg mb-4 bg-gray-100">
-            <h2 class="text-lg font-bold text-gray-900 dark:text-white">IT Resilience Certification</h2>
-            <p class="text-sm text-gray-500 dark:text-gray-400">WVSU • 2024</p>
-        </div>
+            <h2 class="text-lg font-bold text-gray-900 dark:text-white">Introduction to Data Analysis Using Python</h2>
+            <p class="text-sm text-gray-500 dark:text-gray-400">Google &middot; Coursera &bull; June 16, 2026</p>
+        </button>
+
+        <button type="button" class="cert-card bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm hover-lift cursor-pointer text-left"
+            aria-label="View Share Data Through the Art of Visualization certificate"
+            onclick="openCertModal('assets/images/share-data-visualization.png', 'Share Data Through the Art of Visualization certificate awarded to Jomarie Tijada')">
+            <img src="assets/images/share-data-visualization.png"
+                alt="Share Data Through the Art of Visualization certificate awarded to Jomarie Tijada"
+                loading="lazy" decoding="async"
+                class="w-full h-56 object-cover rounded-lg mb-4 bg-gray-100">
+            <h2 class="text-lg font-bold text-gray-900 dark:text-white">Share Data Through the Art of Visualization</h2>
+            <p class="text-sm text-gray-500 dark:text-gray-400">Google &middot; Coursera &bull; June 15, 2026</p>
+        </button>
+
+        <button type="button" class="cert-card bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm hover-lift cursor-pointer text-left"
+            aria-label="View Analyze Data to Answer Questions certificate"
+            onclick="openCertModal('assets/images/analyze-data-answer-questions.png', 'Analyze Data to Answer Questions certificate awarded to Jomarie Tijada')">
+            <img src="assets/images/analyze-data-answer-questions.png"
+                alt="Analyze Data to Answer Questions certificate awarded to Jomarie Tijada"
+                loading="lazy" decoding="async"
+                class="w-full h-56 object-cover rounded-lg mb-4 bg-gray-100">
+            <h2 class="text-lg font-bold text-gray-900 dark:text-white">Analyze Data to Answer Questions</h2>
+            <p class="text-sm text-gray-500 dark:text-gray-400">Google &middot; Coursera &bull; June 14, 2026</p>
+        </button>
+
+        <button type="button" class="cert-card bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm hover-lift cursor-pointer text-left"
+            aria-label="View Process Data from Dirty to Clean certificate"
+            onclick="openCertModal('assets/images/process-data-dirty-to-clean.png', 'Process Data from Dirty to Clean certificate awarded to Jomarie Tijada')">
+            <img src="assets/images/process-data-dirty-to-clean.png"
+                alt="Process Data from Dirty to Clean certificate awarded to Jomarie Tijada"
+                loading="lazy" decoding="async"
+                class="w-full h-56 object-cover rounded-lg mb-4 bg-gray-100">
+            <h2 class="text-lg font-bold text-gray-900 dark:text-white">Process Data from Dirty to Clean</h2>
+            <p class="text-sm text-gray-500 dark:text-gray-400">Google &middot; Coursera &bull; June 13, 2026</p>
+        </button>
+
+        <button type="button" class="cert-card bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm hover-lift cursor-pointer text-left"
+            aria-label="View Prepare Data for Exploration certificate"
+            onclick="openCertModal('assets/images/prepare-data-exploration.png', 'Prepare Data for Exploration certificate awarded to Jomarie Tijada')">
+            <img src="assets/images/prepare-data-exploration.png"
+                alt="Prepare Data for Exploration certificate awarded to Jomarie Tijada"
+                loading="lazy" decoding="async"
+                class="w-full h-56 object-cover rounded-lg mb-4 bg-gray-100">
+            <h2 class="text-lg font-bold text-gray-900 dark:text-white">Prepare Data for Exploration</h2>
+            <p class="text-sm text-gray-500 dark:text-gray-400">Google &middot; Coursera &bull; June 11, 2026</p>
+        </button>
+
+        <button type="button" class="cert-card bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm hover-lift cursor-pointer text-left"
+            aria-label="View Ask Questions to Make Data-Driven Decisions certificate"
+            onclick="openCertModal('assets/images/ask-questions-data-driven-decisions.png', 'Ask Questions to Make Data-Driven Decisions certificate awarded to Jomarie Tijada')">
+            <img src="assets/images/ask-questions-data-driven-decisions.png"
+                alt="Ask Questions to Make Data-Driven Decisions certificate awarded to Jomarie Tijada"
+                loading="lazy" decoding="async"
+                class="w-full h-56 object-cover rounded-lg mb-4 bg-gray-100">
+            <h2 class="text-lg font-bold text-gray-900 dark:text-white">Ask Questions to Make Data-Driven Decisions</h2>
+            <p class="text-sm text-gray-500 dark:text-gray-400">Google &middot; Coursera &bull; June 11, 2026</p>
+        </button>
+
+        <button type="button" class="cert-card bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm hover-lift cursor-pointer text-left"
+            aria-label="View Foundations Data Data Everywhere certificate"
+            onclick="openCertModal('assets/images/foundations-data-data-everywhere.png', 'Foundations Data Data Everywhere certificate awarded to Jomarie Tijada')">
+            <img src="assets/images/foundations-data-data-everywhere.png"
+                alt="Foundations Data Data Everywhere certificate awarded to Jomarie Tijada"
+                loading="lazy" decoding="async"
+                class="w-full h-56 object-cover rounded-lg mb-4 bg-gray-100">
+            <h2 class="text-lg font-bold text-gray-900 dark:text-white">Foundations: Data, Data, Everywhere</h2>
+            <p class="text-sm text-gray-500 dark:text-gray-400">Google &middot; Coursera &bull; June 10, 2026</p>
+        </button>
             </div>
 
     
@@ -674,10 +765,11 @@ document.getElementById('register-form').addEventListener('submit', async functi
         </div>
     </div>
 </footer>
-    <div id="certModal" class="fixed inset-0 z-[150] hidden items-center justify-center bg-black/80 backdrop-blur-sm p-4" onclick="closeCertModal()">
+    <div id="certModal" class="cert-modal fixed inset-0 z-[150] hidden items-center justify-center bg-black/80 backdrop-blur-sm p-4"
+        aria-hidden="true" onclick="closeCertModal()">
         <div class="relative max-w-4xl w-full" onclick="event.stopPropagation()">
             <button class="absolute -top-12 right-0 text-white text-xl font-bold hover:text-gray-300" onclick="closeCertModal()">&times;</button>
-            <img id="modalImage" src="#" alt="Certification" class="w-full h-auto rounded-xl shadow-2xl border border-white/10">
+            <img id="modalImage" src="#" alt="Certificate preview" class="w-full h-auto max-h-[85vh] object-contain rounded-xl shadow-2xl border border-white/10">
         </div>
     </div>
 
@@ -710,31 +802,11 @@ document.getElementById('register-form').addEventListener('submit', async functi
         </div>
     </div>
 
-    <script src="assets/js/theme.js?v=2" defer></script>
+    <script src="assets/js/theme.js?v=4" defer></script>
             <script src="assets/js/chatbotKnowledge.js?v=3" defer></script>
-<script src="assets/js/chat-widget.js?v=10" defer></script>
+<script src="assets/js/chat-widget.js?v=11" defer></script>
 <script src="assets/js/script.js?v=3" defer></script>
 <script>
-        window.openCertModal = function(imgSrc) {
-            const modal = document.getElementById('certModal');
-            const modalImg = document.getElementById('modalImage'); 
-            if (modal && modalImg) {
-                modalImg.src = imgSrc;
-                modal.classList.remove('hidden');
-                modal.classList.add('flex');
-                document.body.style.overflow = 'hidden';
-            }
-        }
-
-        window.closeCertModal = function() {
-            const modal = document.getElementById('certModal'); 
-            if (modal) {
-                modal.classList.add('hidden');
-                modal.classList.remove('flex');
-                document.body.style.overflow = 'auto';
-            }
-        }
-
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
                 closeCertModal();

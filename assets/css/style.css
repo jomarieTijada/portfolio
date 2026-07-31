@@ -32,13 +32,29 @@ html.dark body {
 }
 
 body.ready {
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 html, body {
     margin: 0;
     padding: 0;
     height: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@view-transition {
+    navigation: auto;
+}
+
+::view-transition-old(root) {
+    animation: pageOut 0.14s ease-in both;
+}
+
+::view-transition-new(root) {
+    animation: pageIn 0.24s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 /* Light Mode Text Colors - All pages */
@@ -71,11 +87,23 @@ html, body {
    ANIMATIONS
    All pages
    ========================= */
-.fade-in { animation: fadeIn 0.6s ease-out forwards; }
+.fade-in {
+    animation: fadeIn 0.38s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
+    from { opacity: 0; transform: translate3d(0, 8px, 0); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pageOut {
+    from { opacity: 1; }
+    to { opacity: 0.92; }
+}
+
+@keyframes pageIn {
+    from { opacity: 0.96; }
+    to { opacity: 1; }
 }
 
 @keyframes scroll-left {
@@ -87,20 +115,33 @@ html, body {
    UI COMPONENTS
    ========================= */
 
-/* Hover Lift Effect Fix */
-.hover-lift { 
-    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s ease, border-color 0.2s ease;
-    will-change: transform;
+/* Stable hover feedback: keep the hit area anchored under the cursor. */
+.hover-lift {
+    transition:
+        box-shadow 0.32s cubic-bezier(0.22, 1, 0.36, 1),
+        border-color 0.24s ease,
+        background-color 0.24s ease,
+        color 0.2s ease;
 }
 
-.hover-lift:hover { 
-    transform: translateY(-5px) !important; 
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+.hover-lift:is(a, button) {
+    transition:
+        transform 0.16s ease,
+        box-shadow 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+        border-color 0.24s ease,
+        background-color 0.24s ease,
+        color 0.2s ease;
 }
 
-.dark .hover-lift:hover {
-    box-shadow: 0 10px 25px -5px rgba(255, 255, 255, 0.1);
-    border-color: #444444 !important;
+@media (hover: hover) and (pointer: fine) {
+    .hover-lift:hover {
+        box-shadow: 0 10px 24px -8px rgba(15, 23, 42, 0.18);
+    }
+
+    .dark .hover-lift:hover {
+        box-shadow: 0 12px 26px -9px rgba(0, 0, 0, 0.5);
+        border-color: #444444 !important;
+    }
 }
 
 .text-gray-900, .text-gray-700, .text-gray-600, .text-gray-500 {
@@ -128,6 +169,53 @@ html, body {
     color: var(--accent-warm) !important;
 }
 
+.portfolio-primary-action {
+    border: 1px solid transparent;
+    background: var(--accent-warm) !important;
+    color: #ffffff !important;
+    box-shadow: 0 7px 18px rgba(234, 88, 12, 0.18);
+}
+
+.portfolio-primary-action:hover {
+    background: #c2410c !important;
+    box-shadow: 0 10px 22px rgba(234, 88, 12, 0.24);
+}
+
+.portfolio-secondary-action:hover {
+    border-color: var(--accent-warm-border) !important;
+    background: var(--accent-warm-soft) !important;
+    color: var(--accent-warm) !important;
+}
+
+.portfolio-social-action {
+    border-color: var(--accent-warm-border) !important;
+    background: var(--accent-warm-soft) !important;
+    color: var(--accent-warm) !important;
+}
+
+.portfolio-social-action:hover {
+    box-shadow: 0 9px 20px rgba(234, 88, 12, 0.12);
+}
+
+html.dark .portfolio-primary-action {
+    background: var(--accent-warm) !important;
+    color: #18181b !important;
+    box-shadow: 0 8px 20px rgba(251, 146, 60, 0.16);
+}
+
+html.dark .portfolio-primary-action.hover-lift:hover {
+    border-color: var(--accent-warm) !important;
+    background: #fdba74 !important;
+    box-shadow: 0 12px 26px rgba(251, 146, 60, 0.2);
+}
+
+html.dark .portfolio-secondary-action.hover-lift:hover {
+    border-color: var(--accent-warm-border) !important;
+    background: var(--accent-warm-soft) !important;
+    color: #fdba74 !important;
+    box-shadow: 0 10px 24px rgba(251, 146, 60, 0.12);
+}
+
 /* Portfolio cards - projects, certifications, and home sections */
 .project-card,
 .cert-card,
@@ -148,12 +236,99 @@ html.dark main article.bg-white.rounded-lg.border {
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.28), 0 14px 34px rgba(0, 0, 0, 0.22);
 }
 
+@media (hover: hover) and (pointer: fine) {
+    .project-card:hover,
+    .cert-card:hover,
+    .portfolio-card:hover,
+    .portfolio-mini-card:hover {
+        border-color: var(--accent-warm-border) !important;
+        box-shadow: 0 14px 30px rgba(234, 88, 12, 0.1);
+    }
+
+    html.dark .project-card.hover-lift:hover,
+    html.dark .cert-card.hover-lift:hover,
+    html.dark .portfolio-card.hover-lift:hover,
+    html.dark .portfolio-mini-card.hover-lift:hover {
+        border-color: var(--accent-warm-border) !important;
+        box-shadow: 0 16px 34px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(251, 146, 60, 0.08);
+    }
+
+    .cert-card:hover h2 {
+        color: var(--accent-warm) !important;
+    }
+
+    .cert-card:hover p {
+        border-color: var(--accent-warm-border);
+        background: var(--accent-warm-soft) !important;
+        color: var(--accent-warm) !important;
+    }
+
+    html.dark .cert-card:hover h2,
+    html.dark .cert-card:hover p {
+        color: #fb923c !important;
+    }
+
+    html.dark .cert-card:hover p {
+        background: var(--accent-warm-soft) !important;
+    }
+}
+
 .project-card,
 .cert-card {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
     padding: 1rem !important;
+}
+
+.cert-card {
+    color: inherit;
+    font: inherit;
+    text-align: left;
+}
+
+.cert-overview-item {
+    border-color: #e5e7eb;
+    background: rgba(248, 250, 252, 0.82);
+    transition:
+        box-shadow 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+        border-color 0.24s ease,
+        background-color 0.24s ease;
+}
+
+.cert-overview-item p:first-child {
+    transition: color 0.22s ease;
+}
+
+html.dark .cert-overview-item {
+    border-color: rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .cert-overview-item:hover {
+        border-color: var(--accent-warm-border);
+        background: var(--accent-warm-soft);
+        box-shadow: 0 9px 20px rgba(234, 88, 12, 0.09);
+    }
+
+    .cert-overview-item:hover p:first-child {
+        color: var(--accent-warm) !important;
+    }
+
+    html.dark .cert-overview-item:hover {
+        border-color: var(--accent-warm-border);
+        background: var(--accent-warm-soft);
+    }
+
+    html.dark .cert-overview-item:hover p:first-child {
+        color: #fb923c !important;
+    }
+}
+
+.cert-card:focus-visible {
+    outline: 3px solid var(--accent-warm-border);
+    outline-offset: 3px;
 }
 
 .project-card img,
@@ -167,7 +342,20 @@ html.dark main article.bg-white.rounded-lg.border {
     border-radius: 0.5rem;
     border: 1px solid #eef0f3;
     object-fit: cover;
-    transition: transform 0.3s ease, filter 0.3s ease, border-color 0.3s ease;
+    transition:
+        transform 0.38s cubic-bezier(0.22, 1, 0.36, 1),
+        filter 0.32s ease,
+        border-color 0.28s ease;
+}
+
+.cert-card img {
+    aspect-ratio: 4 / 3;
+    background: #f8fafc;
+    object-fit: contain;
+}
+
+html.dark .cert-card img {
+    background: #f4f4f5;
 }
 
 .card-image-fallback {
@@ -215,13 +403,16 @@ html.dark .card-image-fallback span {
     color: #f4f4f5 !important;
 }
 
-.project-card:hover img,
-.cert-card:hover img,
-.project-card:hover > div:first-child,
-.project-card:hover .card-image-fallback,
-.cert-card:hover .card-image-fallback {
-    transform: scale(1.015);
-    filter: saturate(1.04) contrast(1.02);
+@media (hover: hover) and (pointer: fine) {
+    .project-card:hover img,
+    .cert-card:hover img,
+    .project-card:hover > div:first-child,
+    .project-card:hover .card-image-fallback,
+    .cert-card:hover .card-image-fallback {
+        border-color: var(--accent-warm-border);
+        transform: scale(1.008);
+        filter: saturate(1.03) contrast(1.01);
+    }
 }
 
 .project-card h2,
@@ -245,6 +436,10 @@ html.dark main section.bg-white.rounded-lg.border > div:first-child h2 {
     margin-top: 0.15rem;
 }
 
+.cert-card h2 {
+    transition: color 0.22s ease;
+}
+
 .project-card p,
 .cert-card p {
     color: #475569 !important;
@@ -264,11 +459,16 @@ html.dark .cert-card p {
     width: fit-content;
     margin-top: 0.1rem;
     padding: 0.3rem 0.55rem;
+    border: 1px solid transparent;
     border-radius: 999px;
     background: #f1f5f9;
     color: #475569 !important;
     font-size: 0.75rem !important;
     font-weight: 700;
+    transition:
+        border-color 0.22s ease,
+        background-color 0.22s ease,
+        color 0.22s ease;
 }
 
 html.dark .cert-card p {
@@ -285,10 +485,10 @@ main .domain-link-button {
     min-height: 1.9rem;
     margin-top: auto;
     padding: 0.38rem 0.7rem;
-    border: 1px solid #dbe3ea;
+    border: 1px solid var(--accent-warm-border);
     border-radius: 999px;
-    background: #f8fafc;
-    color: #334155 !important;
+    background: var(--accent-warm-soft);
+    color: var(--accent-warm) !important;
     font-size: 0.75rem;
     font-weight: 700;
     line-height: 1;
@@ -297,17 +497,25 @@ main .domain-link-button {
 .project-card .domain-link-button:hover,
 .project-card span.domain-link-button:hover,
 main .domain-link-button:hover {
-    border-color: var(--accent-warm-border);
-    background: var(--accent-warm-soft);
-    color: var(--accent-warm) !important;
+    border-color: #fb923c;
+    background: #ffedd5;
+    color: #c2410c !important;
 }
 
 html.dark .project-card .domain-link-button,
 html.dark .project-card span.domain-link-button,
 html.dark main .domain-link-button {
-    border-color: rgba(255, 255, 255, 0.1);
-    background: rgba(255, 255, 255, 0.07);
-    color: #e5e7eb !important;
+    border-color: var(--accent-warm-border);
+    background: var(--accent-warm-soft);
+    color: #fdba74 !important;
+}
+
+html.dark .project-card .domain-link-button:hover,
+html.dark .project-card span.domain-link-button:hover,
+html.dark main .domain-link-button:hover {
+    border-color: rgba(251, 146, 60, 0.55);
+    background: rgba(251, 146, 60, 0.18);
+    color: #fed7aa !important;
 }
 
 main section.bg-white.rounded-lg.border {
@@ -333,18 +541,7 @@ main article.bg-white.rounded-lg.border p {
 }
 
 .portfolio-card::before {
-    content: "";
-    position: absolute;
-    inset: 0 0 auto;
-    height: 3px;
-    background: linear-gradient(90deg, var(--accent-warm), #94a3b8, transparent);
-    opacity: 0.2;
-    pointer-events: none;
-}
-
-html.dark .portfolio-card::before {
-    background: linear-gradient(90deg, var(--accent-warm), #71717a, transparent);
-    opacity: 0.28;
+    display: none;
 }
 
 .card-heading {
@@ -403,6 +600,12 @@ html.dark .portfolio-card .space-y-6 span {
     background: rgba(255, 255, 255, 0.05);
 }
 
+html.dark .portfolio-card .space-y-6 span:hover {
+    border-color: var(--accent-warm-border) !important;
+    background: var(--accent-warm-soft);
+    color: #fdba74 !important;
+}
+
 .portfolio-projects-card .grid {
     align-items: stretch;
 }
@@ -444,10 +647,6 @@ html.dark .portfolio-mini-card {
     padding: clamp(1.1rem, 2.5vw, 2rem) !important;
 }
 
-.portfolio-contact-card::before {
-    opacity: 0.34;
-}
-
 .contact-intro {
     display: flex;
     min-height: 100%;
@@ -473,11 +672,44 @@ html.dark .portfolio-mini-card {
 }
 
 html.dark .contact-title span {
-    color: var(--accent-warm) !important;
+    color: #fb923c !important;
 }
 
 .contact-social-block {
     margin-top: 0.75rem;
+}
+
+.contact-social-link {
+    border-color: var(--accent-warm-border) !important;
+    background: var(--accent-warm-soft) !important;
+    color: var(--accent-warm) !important;
+    transition:
+        box-shadow 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+        border-color 0.22s ease,
+        background-color 0.22s ease,
+        color 0.2s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .contact-social-link:hover {
+        transform: none !important;
+        border-color: rgba(234, 88, 12, 0.48) !important;
+        background: rgba(234, 88, 12, 0.14) !important;
+        color: #c2410c !important;
+        box-shadow: 0 8px 18px rgba(234, 88, 12, 0.13);
+    }
+}
+
+html.dark .contact-social-link {
+    border-color: var(--accent-warm-border) !important;
+    background: var(--accent-warm-soft) !important;
+    color: #fb923c !important;
+}
+
+html.dark .portfolio-social-action {
+    border-color: var(--accent-warm-border) !important;
+    background: var(--accent-warm-soft) !important;
+    color: #fb923c !important;
 }
 
 .contact-list {
@@ -498,7 +730,9 @@ html.dark .contact-list {
 }
 
 .contact-link:hover {
-    border-color: #d8dee6 !important;
+    transform: none !important;
+    border-color: var(--accent-warm-border) !important;
+    background: var(--accent-warm-soft) !important;
 }
 
 .contact-link::after {
@@ -514,12 +748,18 @@ html.dark .contact-list {
 }
 
 .contact-link:hover::after {
+    color: var(--accent-warm);
     opacity: 1;
     transform: translateX(0);
 }
 
 html.dark .contact-link {
     background: rgba(0, 0, 0, 0.22);
+}
+
+html.dark .contact-link:hover {
+    border-color: var(--accent-warm-border) !important;
+    background: var(--accent-warm-soft) !important;
 }
 
 @media (max-width: 640px) {
@@ -612,19 +852,19 @@ html.dark .text-blue-500 {
    index.html
    ========================= */
 .experience-dot {
-    border: 2px solid #d1d5db; 
-    background-color: transparent; 
+    border: 2px solid var(--accent-warm-border) !important;
+    background-color: var(--accent-warm-soft) !important;
     transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .experience-dot.current {
-    background-color: #1f2937 !important; 
-    border-color: #1f2937 !important;
+    background-color: var(--accent-warm) !important;
+    border-color: var(--accent-warm) !important;
 }
 
 .experience-item:hover .experience-dot:not(.current) {
-    background-color: #d1d5db;
-    border-color: #d1d5db;
+    background-color: rgba(234, 88, 12, 0.22);
+    border-color: var(--accent-warm);
 }
 
 /* =========================
@@ -672,6 +912,18 @@ html.dark .text-blue-500 {
    PAGINATION
    certifications.html, projects.html
    ========================= */
+#project-container,
+#cert-container {
+    transition: opacity 0.14s ease, transform 0.14s ease;
+}
+
+#project-container.is-page-changing,
+#cert-container.is-page-changing {
+    opacity: 0;
+    transform: translate3d(0, 5px, 0);
+    pointer-events: none;
+}
+
 #pagination-numbers button {
     background-color: transparent;
     color: #9ca3af;
@@ -698,7 +950,9 @@ html.dark .text-blue-500 {
 }
 
 .btn-no-color:hover:not(:disabled) {
-    background-color: rgba(0, 0, 0, 0.05) !important;
+    border-color: var(--accent-warm-border);
+    background-color: var(--accent-warm-soft) !important;
+    color: var(--accent-warm);
 }
 
 button:disabled {
@@ -891,6 +1145,30 @@ button:disabled {
     display: flex; 
     align-items: center; 
     justify-content: center; 
+}
+
+.cert-modal {
+    opacity: 0;
+    transition: opacity 0.18s ease;
+}
+
+.cert-modal > div {
+    opacity: 0;
+    transform: translate3d(0, 7px, 0) scale(0.985);
+    transition: opacity 0.18s ease, transform 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.cert-modal.is-visible,
+.cert-modal.is-visible > div {
+    opacity: 1;
+}
+
+.cert-modal.is-visible > div {
+    transform: translateY(0) scale(1);
+}
+
+.cert-modal.is-closing {
+    pointer-events: none;
 }
 
 /* Sign In Card */
@@ -1148,7 +1426,9 @@ input:-webkit-autofill:focus {
 }
 
 .dark .btn-no-color:hover:not(:disabled) {
-    background-color: rgba(255, 255, 255, 0.1) !important;
+    border-color: var(--accent-warm-border);
+    background-color: var(--accent-warm-soft) !important;
+    color: #fdba74;
 }
 
 .dark .icon-btn { 
@@ -1197,13 +1477,13 @@ input:-webkit-autofill:focus {
 
 /* Dark Mode Experience Timeline */
 .dark .experience-dot.current { 
-    background-color: #ffffff !important; 
-    border-color: #ffffff !important; 
+    background-color: #fb923c !important;
+    border-color: #fb923c !important;
 }
 
 .dark .experience-item:hover .experience-dot:not(.current) {
-    background-color: #cccccc !important;
-    border-color: #cccccc !important;
+    background-color: rgba(251, 146, 60, 0.24) !important;
+    border-color: #fb923c !important;
 }
 
 /* Dark Mode Carousel */
@@ -1448,6 +1728,19 @@ article, .post-card {
     background: rgba(255, 255, 255, 0.96) !important;
     backdrop-filter: blur(18px);
     box-shadow: 0 24px 80px rgba(15, 23, 42, 0.2), 0 4px 18px rgba(15, 23, 42, 0.08);
+    opacity: 0;
+    transform: translate3d(0, 9px, 0) scale(0.985);
+    transform-origin: right bottom;
+    transition: opacity 0.16s ease, transform 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+#chat-window.chat-panel.chat-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+#chat-window.chat-panel.chat-closing {
+    pointer-events: none;
 }
 
 html.dark #chat-window.chat-panel {
@@ -1617,16 +1910,34 @@ html.dark .chat-icon-button:hover {
 
 .chat-send-button {
     flex: 0 0 2.5rem;
+    border: 1px solid rgba(194, 65, 12, 0.24);
+    background: var(--accent-warm) !important;
+    color: #ffffff !important;
+    box-shadow: 0 6px 15px rgba(234, 88, 12, 0.2);
+    transition:
+        background-color 0.22s ease,
+        box-shadow 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 0.2s ease;
 }
 
 .chat-send-button:not(:disabled):hover {
-    box-shadow: 0 8px 18px rgba(234, 88, 12, 0.22);
-    transform: translateY(-1px);
+    background: #c2410c !important;
+    box-shadow: 0 9px 20px rgba(234, 88, 12, 0.28);
 }
 
 .chat-send-button:disabled {
     cursor: not-allowed;
     opacity: 0.42;
+}
+
+html.dark .chat-send-button {
+    border-color: rgba(251, 146, 60, 0.3);
+    background: #fb923c !important;
+    color: #18181b !important;
+}
+
+html.dark .chat-send-button:not(:disabled):hover {
+    background: #fdba74 !important;
 }
 
 .chat-typing {
@@ -1657,7 +1968,14 @@ html.dark .chat-icon-button:hover {
     isolation: isolate;
     overflow: hidden;
     background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.12), transparent 46%);
+    color: #fb923c !important;
     box-shadow: 0 14px 30px rgba(0, 0, 0, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.24);
+}
+
+#toggle-chat .chat-launcher-icon,
+#toggle-chat .chat-launcher-icon i,
+#toggle-chat > span:last-child {
+    color: #fb923c !important;
 }
 
 #toggle-chat::before {
@@ -1667,7 +1985,6 @@ html.dark .chat-icon-button:hover {
     z-index: -1;
     border-radius: 999px;
     box-shadow: inset 0 0 0 1px var(--accent-warm-border);
-    animation: chatRingPulse 2.4s ease-out infinite;
 }
 
 #toggle-chat::after {
@@ -1678,9 +1995,10 @@ html.dark .chat-icon-button:hover {
     left: -70%;
     width: 58%;
     border-radius: 999px;
-    background: linear-gradient(105deg, transparent 0%, rgba(255, 255, 255, 0.18) 32%, rgba(255, 255, 255, 0.62) 50%, rgba(255, 255, 255, 0.18) 68%, transparent 100%);
-    transform: skewX(-18deg);
-    animation: chatShine 2.6s ease-in-out infinite;
+    background: linear-gradient(105deg, transparent 0%, rgba(251, 146, 60, 0.14) 32%, rgba(255, 237, 213, 0.72) 50%, rgba(251, 146, 60, 0.14) 68%, transparent 100%);
+    transform: translate3d(0, 0, 0) skewX(-18deg);
+    animation: chatShine 4.6s cubic-bezier(0.4, 0, 0.2, 1) 0.8s infinite;
+    will-change: transform, opacity;
     pointer-events: none;
 }
 
@@ -1699,9 +2017,9 @@ html.dark .chat-icon-button:hover {
     align-items: center;
     justify-content: center;
     border-radius: 999px;
-    background: rgba(255, 255, 255, 0.16);
+    background: rgba(251, 146, 60, 0.14);
+    color: #fb923c;
     transform-origin: center;
-    animation: chatIconFloat 2.8s ease-in-out infinite;
 }
 
 .chat-avatar {
@@ -1714,31 +2032,10 @@ html.dark .chat-icon-button:hover {
     animation: none !important;
 }
 
-#chat-window:not(.hidden) {
-    animation: chatWindowIn 0.22s ease-out both;
-}
-
-@keyframes chatRingPulse {
-    0% { opacity: 0.85; box-shadow: inset 0 0 0 1px var(--accent-warm-border), 0 0 0 0 rgba(234, 88, 12, 0.2); }
-    70% { opacity: 0.35; box-shadow: inset 0 0 0 1px rgba(234, 88, 12, 0.12), 0 0 0 10px rgba(234, 88, 12, 0); }
-    100% { opacity: 0.85; box-shadow: inset 0 0 0 1px var(--accent-warm-border), 0 0 0 0 rgba(234, 88, 12, 0); }
-}
-
 @keyframes chatShine {
-    0%, 38% { left: -70%; opacity: 0; }
-    48% { opacity: 0.9; }
-    72% { left: 118%; opacity: 0; }
-    100% { left: 118%; opacity: 0; }
-}
-
-@keyframes chatIconFloat {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-2px) rotate(-5deg); }
-}
-
-@keyframes chatWindowIn {
-    from { opacity: 0; transform: translateY(10px) scale(0.98); }
-    to { opacity: 1; transform: translateY(0) scale(1); }
+    0%, 58% { transform: translate3d(0, 0, 0) skewX(-18deg); opacity: 0; }
+    63% { opacity: 0.9; }
+    79%, 100% { transform: translate3d(325%, 0, 0) skewX(-18deg); opacity: 0; }
 }
 
 @keyframes chatTyping {
@@ -1771,12 +2068,53 @@ html.dark .chat-icon-button:hover {
     }
 }
 
+html.theme-transition body,
+html.theme-transition header,
+html.theme-transition main,
+html.theme-transition footer,
+html.theme-transition nav,
+html.theme-transition section,
+html.theme-transition article,
+html.theme-transition button,
+html.theme-transition a,
+html.theme-transition input,
+html.theme-transition textarea,
+html.theme-transition .portfolio-card,
+html.theme-transition .portfolio-mini-card,
+html.theme-transition .project-card,
+html.theme-transition .cert-card,
+html.theme-transition .contact-link,
+html.theme-transition .chat-panel,
+html.theme-transition .chat-header,
+html.theme-transition #chat-box,
+html.theme-transition i,
+html.theme-transition svg {
+    transition-duration: 0.2s !important;
+    transition-property: background-color, border-color, color, fill, stroke, box-shadow !important;
+    transition-timing-function: ease !important;
+}
+
 @media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .fade-in,
+    ::view-transition-old(root),
+    ::view-transition-new(root),
     #toggle-chat::before,
     #toggle-chat::after,
     .chat-launcher-icon,
-    #chat-window:not(.hidden),
     .chat-typing span {
-        animation: none;
+        animation: none !important;
+    }
+
+    .hover-lift,
+    #project-container,
+    #cert-container,
+    .cert-modal,
+    .cert-modal > div,
+    #chat-window.chat-panel {
+        transition: none !important;
     }
 }

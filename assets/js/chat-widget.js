@@ -4,6 +4,8 @@
     const scriptUrl = script ? new URL(script.src, window.location.href) : new URL('assets/js/chat-widget.js', window.location.href);
     const assetBase = scriptUrl.href.replace(/assets\/js\/chat-widget\.js(?:\?.*)?$/, 'assets/');
     const portraitUrl = `${assetBase}images/jom.png`;
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let chatCloseTimer;
 
     const fallbackKnowledge = {
         profile: {
@@ -320,6 +322,10 @@
             chatWindow.setAttribute('role', 'dialog');
             chatWindow.setAttribute('aria-modal', 'false');
             chatWindow.setAttribute('aria-labelledby', 'chat-title');
+            chatWindow.setAttribute('aria-hidden', String(chatWindow.classList.contains('hidden')));
+            if (!chatWindow.classList.contains('hidden')) {
+                chatWindow.classList.add('chat-visible');
+            }
         }
         if (chatWindow) {
             const title = chatWindow.querySelector('h3');
@@ -374,13 +380,38 @@
     }
 
     function setOpen(isOpen, chatWindow, toggleBtn, messageInput) {
-        chatWindow.classList.toggle('hidden', !isOpen);
+        window.clearTimeout(chatCloseTimer);
         toggleBtn.classList.toggle('chat-open', isOpen);
         toggleBtn.setAttribute('aria-expanded', String(isOpen));
+        chatWindow.setAttribute('aria-hidden', String(!isOpen));
 
         if (isOpen) {
-            window.setTimeout(() => messageInput.focus(), 40);
+            chatWindow.classList.remove('hidden', 'chat-closing');
+
+            if (reducedMotion.matches) {
+                chatWindow.classList.add('chat-visible');
+            } else {
+                window.requestAnimationFrame(() => chatWindow.classList.add('chat-visible'));
+            }
+
+            window.setTimeout(() => messageInput.focus(), reducedMotion.matches ? 0 : 120);
+            return;
         }
+
+        chatWindow.classList.remove('chat-visible');
+        chatWindow.classList.add('chat-closing');
+
+        const finishClose = () => {
+            chatWindow.classList.add('hidden');
+            chatWindow.classList.remove('chat-closing');
+        };
+
+        if (reducedMotion.matches) {
+            finishClose();
+            return;
+        }
+
+        chatCloseTimer = window.setTimeout(finishClose, 180);
     }
 
     function resizeInput(messageInput) {
@@ -407,7 +438,7 @@
         toggleBtn.addEventListener('click', (event) => {
             event.preventDefault();
             event.stopImmediatePropagation();
-            setOpen(chatWindow.classList.contains('hidden'), chatWindow, toggleBtn, messageInput);
+            setOpen(toggleBtn.getAttribute('aria-expanded') !== 'true', chatWindow, toggleBtn, messageInput);
         }, true);
 
         closeBtn.addEventListener('click', (event) => {
